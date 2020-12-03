@@ -10,10 +10,7 @@ footer {
 }
 
 .footer-links:hover {
-  text-shadow:
-    0.05rem 0.05rem 0 #666666,
-    0.075em 0.075rem 0 #333333,
-    0.1em 0.1rem 0 #000
+  text-shadow: 0.05rem 0.05rem 0 #666666, 0.075em 0.075rem 0 #333333, 0.1em 0.1rem 0 #000;
 }
 
 #f-email {
@@ -23,3 +20,5 @@ footer {
 #f-codepen {
   color: #d9725b;
 }
+
+/*# sourceMappingURL=footer-styles.css.map */

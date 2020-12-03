@@ -1,5 +1,5 @@
 {
-  "name": "-y",
+  "name": "simplesweet",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,8 +8,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "index-scss": "sass --watch scss/index-styles.scss css/index-styles.css"
-    "nav-scss": "sass --watch scss/nav.scss css/nav.css"
+    "scss": "sass --watch scss/index-styles.scss:css/index-styles.css scss/nav-styles.scss:css/nav-styles.css scss/footer-styles.scss:css/footer-styles.css"
   },
   "author": "",
   "license": "ISC"
