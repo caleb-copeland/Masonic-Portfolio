@@ -2,25 +2,20 @@
 /*---------- Google Fonts ----------*/
 /*----------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap");
-
+/*--------------------------------------*/
+/*---------- Base Site Styles ----------*/
+/*--------------------------------------*/
 body,
 html {
   font-family: "Anonymous Pro", courier, serif;
   font-size: 20px;
+  color: #000;
   background-color: #f2f2f2;
 }
 
 body {
   opacity: 1;
   transition: all 0.5s ease;
-}
-
-body .fade-out.load {
-  transition: none;
-}
-
-body .fade-out {
-  opacity: 0;
 }
 
 h1 {
@@ -30,6 +25,15 @@ h1 {
 
 a:hover {
   text-decoration: none;
+}
+
+/*---------- Fade-Out ----------*/
+.fade-out {
+  opacity: 0;
+}
+
+.load {
+  transition: none;
 }
 
 /*---------------------------------------*/
@@ -42,9 +46,8 @@ a:hover {
   text-shadow: 0.07rem 0.07rem 0 #000;
   transition: text-shadow 0.5s ease;
 }
-
 #nav-logo:hover {
-  text-shadow: 0.17rem 0.17rem 0 #0000;
+  text-shadow: 0.15rem 0.15rem 0 #000;
 }
 
 .navigation-links {
@@ -52,7 +55,6 @@ a:hover {
   text-shadow: 0.05rem 0.05rem 0 #000;
   transition: text-shadow 0.5s ease;
 }
-
 .navigation-links:hover {
   text-shadow: 0.1rem 0.1rem 0 #000;
 }
@@ -74,13 +76,11 @@ a:hover {
   width: 100%;
   color: white;
 }
-
 .portfolio-card .overlay {
   height: auto;
   width: auto;
   z-index: 1;
 }
-
 .portfolio-card .overlay .overlay-link {
   display: block;
   position: absolute;
@@ -90,7 +90,6 @@ a:hover {
   left: 0;
   z-index: 1;
 }
-
 .portfolio-card .thumbnail {
   height: auto;
   width: 80%;
@@ -100,11 +99,39 @@ a:hover {
   transition: all 0.5s ease;
   box-shadow: 0.5rem 0.5rem 0 #000, 1rem 1rem 2rem #000;
 }
-
 .portfolio-card:hover .thumbnail {
   bottom: -8rem;
 }
-
+.portfolio-card.memory-game {
+  background-color: #656b8c;
+}
+.portfolio-card.memory-game h2 {
+  text-shadow: 0.125rem 0.125rem 0 #f23005;
+  transition: all 0.5s ease;
+}
+.portfolio-card.memory-game h2.hover {
+  text-shadow: 0.175rem 0.175rem 0 #f23005;
+}
+.portfolio-card.roast-calc {
+  background-color: #2a828c;
+}
+.portfolio-card.roast-calc h2 {
+  text-shadow: 0.125rem 0.125rem 0 #f2784b;
+  transition: all 0.5s ease;
+}
+.portfolio-card.roast-calc h2.hover {
+  text-shadow: 0.175rem 0.175rem 0 #f2784b;
+}
+.portfolio-card.form {
+  background-color: #717171;
+}
+.portfolio-card.form h2 {
+  text-shadow: 0.125rem 0.125rem 0 #edca3b;
+  transition: all 0.5s ease;
+}
+.portfolio-card.form h2.hover {
+  text-shadow: 0.175rem 0.175rem 0 #edca3b;
+}
 .portfolio-card::after {
   display: block;
   position: absolute;
@@ -114,18 +141,6 @@ a:hover {
   left: 15%;
   content: "";
   box-shadow: 0 0 1rem #000;
-}
-
-#memory-game {
-  background-color: #656b8c;
-}
-
-#roast-calc {
-  background-color: #2a828c;
-}
-
-#form {
-  background-color: #717171;
 }
 
 /*-----------------------------------*/

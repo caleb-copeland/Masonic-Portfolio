@@ -1,48 +1,41 @@
 $(window).ready(function() {
 
   /*---------- Full-Page Fade-In (at load) ----------*/
+  // Instantly remove fade-out and load classes from BODY
   $(function() {
     $('body').removeClass('fade-out load');
   });
 
+  /*---------- Set layout when page is loaded ----------*/
   // Variable to hold current screen width
   let screenWidth = $(window).width();
+  // Width of large screen break (px)
   const largeScreen = 992;
+  // Width of x-large screen break (px)
   const xtraLargeScreen = 1200;
 
   $(window).ready(function() {
-    // If screen is "lg" then
+    // If screen width is greater than "largeScreen"...
     if (screenWidth >= largeScreen) {
       updateDesktopLayout();
+    // If screen width is smaller than "largeScreen"...
     } else if (screenWidth < largeScreen) {
       updateMobileLayout();
     }
   })
 
+  /*---------- When the window is resized ----------*/
   $(window).resize(function() {
+    // If the window has been resized to a "largeScreen" OR an "extraLargeScreen" width...
     if ((screenWidth >= xtraLargeScreen && $(this).width() < xtraLargeScreen) || (screenWidth < xtraLargeScreen && $(this).width() >= xtraLargeScreen) || (screenWidth < largeScreen && $(this).width() >= largeScreen)) {
       screenWidth = $(this).width();
       updateDesktopLayout();
+    // If the window has been resized to a width smaller than "largeScreen" width...
     } else if (screenWidth >= largeScreen && $(this).width() < largeScreen) {
       screenWidth = $(this).width();
       updateMobileLayout();
     }
   })
-
-  /*---------- FADE-OUT the page when a link is clicked ----------*/
-  $('a').click(function(e) {
-    if ($(this).attr('target') != '_blank') {
-      e.preventDefault();
-      $('body').addClass('fade-out');
-      var newLocation = this.href;
-
-      setTimeout(function() {
-        window.location.href = newLocation;
-      }, 500);
-    }
-  })
-
-
 
   /*---------- Function to update the layout in desktop view ----------*/
   const updateDesktopLayout = () => {
@@ -69,11 +62,26 @@ $(window).ready(function() {
     });
   }
 
+  /*---------- Add 'hover' class to h2 When parent 'portfolio-card' is hover  ----------*/
   $('.portfolio-card').hover(
     function() {
-      $(this).addClass('hover');
+      $(this).children().addClass('hover');
+      console.log ($(this).children('h2').attr('class'));
     },
     function() {
-      $(this).removeClass('hover');
+      $(this).children().removeClass('hover');
     });
+
+  /*---------- FADE-OUT the page when a link is clicked ----------*/
+  $('a').click(function(e) {
+    if ($(this).attr('target') != '_blank') {
+      e.preventDefault();
+      $('body').addClass('fade-out');
+      var newLocation = this.href;
+
+      setTimeout(function() {
+        window.location.href = newLocation;
+      }, 500);
+    }
+  })
 });

@@ -1,25 +1,22 @@
 // Color Variables
 @use 'colors'; // Google Fonts and Font-Variables
+// Google Fonts
 @use 'fonts'; // Base Styles - Global
 
+/*--------------------------------------*/
+/*---------- Base Site Styles ----------*/
+/*--------------------------------------*/
 body,
 html {
   font-family: fonts.$anonymous;
   font-size: 20px;
+  color: #000;
   background-color: colors.$white-ish;
 }
 
 body {
   opacity: 1;
   transition: all 0.5s ease;
-
-  .fade-out.load {
-    transition: none;
-  }
-
-  .fade-out {
-    opacity: 0;
-  }
 }
 
 h1 {
@@ -31,4 +28,13 @@ a {
   &:hover {
     text-decoration: none;
   }
+}
+
+/*---------- Fade-Out ----------*/
+.fade-out{
+  opacity: 0;
+}
+
+.load {
+  transition: none;
 }
