@@ -1,0 +1,34 @@
+// Color Variables
+@use 'colors'; // Google Fonts and Font-Variables
+@use 'fonts'; // Base Styles - Global
+
+body,
+html {
+  font-family: fonts.$anonymous;
+  font-size: 20px;
+  background-color: colors.$white-ish;
+}
+
+body {
+  opacity: 1;
+  transition: all 0.5s ease;
+
+  .fade-out.load {
+    transition: none;
+  }
+
+  .fade-out {
+    opacity: 0;
+  }
+}
+
+h1 {
+  font-family: fonts.$raleway;
+  font-weight: 800;
+}
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}

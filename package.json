@@ -8,7 +8,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "scss": "sass --watch scss/index-styles.scss:css/index-styles.css scss/nav-styles.scss:css/nav-styles.css scss/footer-styles.scss:css/footer-styles.css"
+    "scss": "sass --watch scss/styles.scss:css/styles.css"
   },
   "author": "",
   "license": "ISC"

@@ -5,7 +5,6 @@ $(window).ready(function() {
     $('body').removeClass('fade-out load');
   });
 
-
   // Variable to hold current screen width
   let screenWidth = $(window).width();
   const largeScreen = 992;
