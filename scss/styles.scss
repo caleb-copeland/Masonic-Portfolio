@@ -23,7 +23,7 @@
   transition: text-shadow 0.5s ease;
   // On Hover...
   &:hover {
-    text-shadow: 0.1rem 0.1rem 0 #000;
+    text-shadow: 0.08rem 0.08rem 0 #000;
   }
 }
 
@@ -65,8 +65,8 @@
     margin-top: -7rem;
     bottom: -9rem;
     left: 10%;
-    transition: all 0.5s ease;
     box-shadow: 0.5rem 0.5rem 0 #000, 1rem 1rem 2rem #000;
+    transition: all 0.5s ease;
   }
 
   &:hover .thumbnail {
@@ -92,6 +92,62 @@
     width: 70%;
     bottom: -1rem;
     left: 15%;
+    content: '';
+    box-shadow: 0 0 1rem #000;
+  }
+}
+/*---------------------------------------*/
+/*---------- About Body Styles ----------*/
+/*---------------------------------------*/
+* { border: 1px solid red;}
+#about-intro {
+  background-color: colors.$orange;
+
+  h1,
+  h2 {
+    font-family: fonts.$anonymous;
+    text-shadow: 0.125rem 0.125rem 0 #000;
+    transition: all 0.5s ease;
+  }
+
+  h1 {
+    top: 1.5rem;
+    left: 10%;
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    top: -0.25rem;
+    right: 15%;
+    font-size: 4rem;
+  }
+
+  .thumbnail {
+    bottom: -6rem;
+    transition: all 0.5s ease;
+  }
+
+  &:hover {
+    h1 {
+      top: 1rem;
+    }
+    h2 {
+      top: 5rem;
+    }
+
+    .thumbnail {
+      bottom: -8rem;
+      z-index: 1;
+    }
+  }
+  // Overlay
+  &::after {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
     content: '';
     box-shadow: 0 0 1rem #000;
   }

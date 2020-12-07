@@ -15,7 +15,7 @@ html {
 
 body {
   opacity: 1;
-  transition: all 0.5s ease;
+  transition: all 0.75s ease-in-out;
 }
 
 h1 {
@@ -23,8 +23,14 @@ h1 {
   font-weight: 800;
 }
 
+a {
+  color: #6872a6;
+  text-shadow: 0.05rem 0.05rem 0 #000;
+  transition: all 0.4s ease;
+}
 a:hover {
   text-decoration: none;
+  text-shadow: 0.06rem 0.06rem 0 #000;
 }
 
 /*---------- Fade-Out ----------*/
@@ -56,7 +62,7 @@ a:hover {
   transition: text-shadow 0.5s ease;
 }
 .navigation-links:hover {
-  text-shadow: 0.1rem 0.1rem 0 #000;
+  text-shadow: 0.08rem 0.08rem 0 #000;
 }
 
 #projects-nav {
@@ -96,8 +102,8 @@ a:hover {
   margin-top: -7rem;
   bottom: -9rem;
   left: 10%;
-  transition: all 0.5s ease;
   box-shadow: 0.5rem 0.5rem 0 #000, 1rem 1rem 2rem #000;
+  transition: all 0.5s ease;
 }
 .portfolio-card:hover .thumbnail {
   bottom: -8rem;
@@ -109,8 +115,8 @@ a:hover {
   text-shadow: 0.125rem 0.125rem 0 #f23005;
   transition: all 0.5s ease;
 }
-.portfolio-card.memory-game h2.hover {
-  text-shadow: 0.175rem 0.175rem 0 #f23005;
+.portfolio-card.memory-game h2.js-hover {
+  text-shadow: 0.2rem 0.2rem 0 #f23005;
 }
 .portfolio-card.roast-calc {
   background-color: #2a828c;
@@ -119,8 +125,8 @@ a:hover {
   text-shadow: 0.125rem 0.125rem 0 #f2784b;
   transition: all 0.5s ease;
 }
-.portfolio-card.roast-calc h2.hover {
-  text-shadow: 0.175rem 0.175rem 0 #f2784b;
+.portfolio-card.roast-calc h2.js-hover {
+  text-shadow: 0.2rem 0.2rem 0 #f2784b;
 }
 .portfolio-card.form {
   background-color: #717171;
@@ -129,8 +135,8 @@ a:hover {
   text-shadow: 0.125rem 0.125rem 0 #edca3b;
   transition: all 0.5s ease;
 }
-.portfolio-card.form h2.hover {
-  text-shadow: 0.175rem 0.175rem 0 #edca3b;
+.portfolio-card.form h2.js-hover {
+  text-shadow: 0.2rem 0.2rem 0 #edca3b;
 }
 .portfolio-card::after {
   display: block;
@@ -139,6 +145,57 @@ a:hover {
   width: 70%;
   bottom: -1rem;
   left: 15%;
+  content: "";
+  box-shadow: 0 0 1rem #000;
+}
+
+/*---------------------------------------*/
+/*---------- About Body Styles ----------*/
+/*---------------------------------------*/
+* {
+  border: 1px solid red;
+}
+
+#about-intro {
+  background-color: #d9725b;
+}
+#about-intro h1,
+#about-intro h2 {
+  font-family: "Anonymous Pro", courier, serif;
+  text-shadow: 0.125rem 0.125rem 0 #000;
+  transition: all 0.5s ease;
+}
+#about-intro h1 {
+  top: 1.5rem;
+  left: 10%;
+  font-size: 1.5rem;
+}
+#about-intro h2 {
+  top: -0.25rem;
+  right: 15%;
+  font-size: 4rem;
+}
+#about-intro .thumbnail {
+  bottom: -6rem;
+  transition: all 0.5s ease;
+}
+#about-intro:hover h1 {
+  top: 1rem;
+}
+#about-intro:hover h2 {
+  top: 5rem;
+}
+#about-intro:hover .thumbnail {
+  bottom: -8rem;
+  z-index: 1;
+}
+#about-intro::after {
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
   content: "";
   box-shadow: 0 0 1rem #000;
 }

@@ -18,7 +18,7 @@ $(window).ready(function() {
     // If screen width is greater than "largeScreen"...
     if (screenWidth >= largeScreen) {
       updateDesktopLayout();
-    // If screen width is smaller than "largeScreen"...
+      // If screen width is smaller than "largeScreen"...
     } else if (screenWidth < largeScreen) {
       updateMobileLayout();
     }
@@ -30,7 +30,7 @@ $(window).ready(function() {
     if ((screenWidth >= xtraLargeScreen && $(this).width() < xtraLargeScreen) || (screenWidth < xtraLargeScreen && $(this).width() >= xtraLargeScreen) || (screenWidth < largeScreen && $(this).width() >= largeScreen)) {
       screenWidth = $(this).width();
       updateDesktopLayout();
-    // If the window has been resized to a width smaller than "largeScreen" width...
+      // If the window has been resized to a width smaller than "largeScreen" width...
     } else if (screenWidth >= largeScreen && $(this).width() < largeScreen) {
       screenWidth = $(this).width();
       updateMobileLayout();
@@ -65,11 +65,10 @@ $(window).ready(function() {
   /*---------- Add 'hover' class to h2 When parent 'portfolio-card' is hover  ----------*/
   $('.portfolio-card').hover(
     function() {
-      $(this).children().addClass('hover');
-      console.log ($(this).children('h2').attr('class'));
+      $(this).children().addClass('js-hover');
     },
     function() {
-      $(this).children().removeClass('hover');
+      $(this).children().removeClass('js-hover');
     });
 
   /*---------- FADE-OUT the page when a link is clicked ----------*/

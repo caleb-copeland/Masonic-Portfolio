@@ -18,15 +18,15 @@
     $primary-color: colors.$form-grey;
     $secondary-color: colors.$form-yellow;
   }
-  // Portfolio Card Backgrouond Color...
+  // Portfolio Card Background Color...
   background-color: $primary-color;
   // Portfolio Card h2 Text-Shadow...
   h2 {
     text-shadow: 0.125rem 0.125rem 0 $secondary-color;
     transition: all 0.5s ease;
     //Individual card "h2" Styles when parent "portfolio-card" is hover
-    &.hover {
-      text-shadow: 0.175rem 0.175rem 0 $secondary-color;
+    &.js-hover { // Hover class added in javascript
+      text-shadow: 0.2rem 0.2rem 0 $secondary-color;
     }
   }
 }

@@ -1,8 +1,5 @@
-// Color Variables
-@use 'colors'; // Google Fonts and Font-Variables
-// Google Fonts
-@use 'fonts'; // Base Styles - Global
-
+@use 'colors'; // Color Variables
+@use 'fonts'; // Google Fonts and Font-Variables
 /*--------------------------------------*/
 /*---------- Base Site Styles ----------*/
 /*--------------------------------------*/
@@ -16,7 +13,7 @@ html {
 
 body {
   opacity: 1;
-  transition: all 0.5s ease;
+  transition: all 0.75s ease-in-out;
 }
 
 h1 {
@@ -25,13 +22,17 @@ h1 {
 }
 
 a {
+  color: colors.$dark-blue;
+  text-shadow: 0.05rem 0.05rem 0 #000;
+  transition: all 0.4s ease;
+
   &:hover {
     text-decoration: none;
+    text-shadow: 0.06rem 0.06rem 0 #000;
   }
 }
-
 /*---------- Fade-Out ----------*/
-.fade-out{
+.fade-out {
   opacity: 0;
 }
 
