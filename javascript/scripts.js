@@ -1,5 +1,4 @@
-$(window).ready(function() {
-
+$(document).ready(function() {
   /*---------- Full-Page Fade-In (at load) ----------*/
   // Instantly remove fade-out and load classes from BODY
   $(function() {
@@ -14,7 +13,7 @@ $(window).ready(function() {
   // Width of x-large screen break (px)
   const xtraLargeScreen = 1200;
 
-  $(window).ready(function() {
+  $(document).ready(function() {
     // If screen width is greater than "largeScreen"...
     if (screenWidth >= largeScreen) {
       updateDesktopLayout();
@@ -39,24 +38,50 @@ $(window).ready(function() {
 
   /*---------- Function to update the layout in desktop view ----------*/
   const updateDesktopLayout = () => {
-    var cardHeights = [];
-    $('.main-content').each(function(i) {
-      cardHeights[i] = $(this).height();
+    var cardPositions = [];
+    var cardHeights = []; //Array stores height of every ".portfolio-card"
+    var padding = (16 * 2); // 16px (1rem @ lg screen)
 
+    // Loop through every instance of ".free-masonty"...
+    $('.free-masonry').each(function(i) {
+      cardPositions[i] = $(this).offset(); // Stores all card top positions in array
+      cardHeights[i] = $(this).outerHeight(); // Store all card heights in array (including margins)
+
+      // If the current card's index IS AFTER the first two cards...
+      // [The first two cards will always be flush with the top]
       if (i > 1) {
-        var heightGap = -(cardHeights[i - 1] - cardHeights[i - 2] + 30);
-        if (i % 2 === 0) {
-          $(this).css('top', heightGap + 'px');
-        } else {
-          $(this).css('margin-top', '1.5rem');
-        }
+        var currentCardTop = cardPositions[i].top; // Get TOP position of current card
+
+        var cardDirectlyAboveTop = cardPositions[i - 2].top; // Get TOP position of the card that is directly above the current card
+
+        var cardDirectlyAboveHeight = cardHeights[i - 2]; // Get HEIGHT of the card that is directly above the current card
+        var cardDirectlyAboveBottom = cardDirectlyAboveTop + cardDirectlyAboveHeight; // Get BOTTOM position of the card that is directly above the current card
+
+        var heightGap = currentCardTop - cardDirectlyAboveBottom; // Variable to hold how far the card needs to be adjusted.
+
+        var updatedCurrentCardTop = currentCardTop - heightGap; // Variable holds the card's current top position minus the distance to the bottom of the card directly above it.
+
+        $(this).offset({top: updatedCurrentCardTop + padding}); // Adjust the actual top position in the current card
+
+        cardPositions[i].top = $(this).offset().top; // Update the position array with the new top position for the current card. This affects the placement of the upcoming cards in the loop (if there are any)
+
+        /*---------- Console Logs ----------*/
+        // console.log('-------------------------');
+        // console.log(`Above Top: ${cardDirectlyAboveTop}`);
+        // console.log(`Above Height: ${cardDirectlyAboveHeight}`);
+        // console.log(`Above Bottom: ${cardDirectlyAboveBottom}`);
+        // console.log(`Curent Top: ${currentCardTop}`);
+        // console.log(`Height Gap: ${heightGap}`);
+        // console.log(`New Current Top: ${updatedCurrentCardTop}`);
+        // console.log(`Adjusted Top: ${cardPositions[i].top}`);
+
       }
     });
   }
 
   /*---------- Function to update the layout in mobile view ----------*/
   const updateMobileLayout = () => {
-    $('.main-content').each(function(i) {
+    $('.free-masonry').each(function(i) {
       $(this).css('top', '0px');
       $(this).css('margin-top', '0.75rem');
     });

@@ -20,23 +20,31 @@
 
 <body>
   <!-- Fade-Out Body @ Load -->
-  <script>document.body.className += 'fade-out load';</script>
+  <script>
+    document.body.className += 'fade-out load';
+  </script>
 
   <header>
     <!--Navigation Bar-->
     <div class="container">
       <!-- Grid Row -->
-      <nav class="row mt-5 px-3 nav navbar-expand justify-content-between align-items-center" role="navigation">
+      <nav class="row mt-3 mt-lg-5 px-3 nav navbar-expand-lg navbar-light justify-content-between align-items-center" role="navigation">
         <!-- Grid Column -->
         <div class="justify-content-start">
           <!-- "Logo" -->
-          <a class="navbar-links" id="nav-logo" href="./index.html">C</a>
+          <a id="nav-logo" href="./index.html">C</a>
         </div>
+        <!-- Mobile Nav Toggler Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
         <!-- Grid Column -->
-        <div class="navbar-nav justify-content-end align-middle">
-          <!-- Links -->
-          <a class="navigation-links" id="projects-nav" href="./index.html">Projects</a>
-          <a class="navigation-links" id="about-nav" href="./common/about.html">About</a>
+        <div class="collapse navbar-collapse justify-content-end align-middle" id="navbarSupportedContent">
+          <div class="navbar-nav">
+            <!-- Links -->
+            <a class="nav-link" id="projects-nav" href="./index.html">Projects</a>
+            <a class="nav-link" id="about-nav" href="./common/about.html">About</a>
+          </div>
         </div>
       </nav>
     </div>
@@ -56,22 +64,22 @@
     <!-- Grid Row -->
     <div class="row">
       <!-- Grid Column -->
-      <div class="col-lg-6 my-1 my-lg-0">
-        <div class="position-relative text-right main-content" id="short-about">
-          <p>My name is Caleb Copeland. I design useful and interesting web application experiences. Please check out a few projects I have completed!</p>
-          <a href="./common/about">Learn More About Me</a>
+      <div class="col-lg-6 mt-0 my-lg-0">
+        <div class="text-right free-masonry" id="short-about">
+          <p>My name is Caleb Copeland. I design useful and interesting web experiences. Please check out a few projects I have completed!</p>
+          <a href="./common/about.html">Learn More About Me</a>
         </div>
       </div>
 
       <!-- Grid Colum -->
       <div class="col-lg-6 my-1 my-lg-0">
         <!-- Memory Game -->
-        <div class="p-4 position-relative overflow-hidden main-content disable-select portfolio-card memory-game" id="memory-game">
+        <div class="p-3 p-lg-4 position-relative overflow-hidden free-masonry portfolio-card memory-game" id="memory-game">
           <div class="overlay">
             <a class="overlay-link" href="./common/memory-game.html"></a>
           </div>
           <h2>Memory Game</h2>
-          <p>Pure javascript, css, and html memory game. Object oriented design utilizing classes for efficient code. Mobile compatible with different layouts for portrait and landscape.</p>
+          <p>Object oriented and mobile friendly</p>
           <img class="position-relative thumbnail" src="./img/memory.png"></img>
         </div>
       </div>
@@ -79,13 +87,12 @@
       <!-- Grid Colum -->
       <div class="col-lg-6 my-1 my-lg-0">
         <!-- Roasting Calculator -->
-        <div class="p-4 position-relative overflow-hidden main-content disable-select portfolio-card roast-calc" id="roast-calc">
+        <div class="p-3 p-lg-4 position-relative overflow-hidden free-masonry portfolio-card roast-calc" id="roast-calc">
           <div class="overlay">
             <a class="overlay-link" href="./common/memory-game.html"></a>
           </div>
           <h2>Coffee Roasting Calculator</h2>
-          <p>A mobile compatible coffee roasting calculator with input-masking and a reactive placeholder. Automatically detects which field to calculate and which fields to clear. Custom module coded to explain how the calculator works and define
-            keywords.</p>
+          <p>Smart calculator and educational tool</p>
           <img class="position-relative thumbnail" src="./img/roast.png"></img>
         </div>
       </div>
@@ -93,21 +100,22 @@
       <!-- Grid Colum -->
       <div class="col-lg-6 my-1 my-lg-0">
         <!-- Input Form -->
-        <div class="p-4 position-relative overflow-hidden main-content disable-select portfolio-card form" id="form">
+        <div class="p-3 p-lg-4 position-relative overflow-hidden free-masonry portfolio-card form" id="form">
           <div class="overlay">
             <a class="overlay-link" href="./common/memory-game.html"></a>
           </div>
           <h2>Animated Input Form</h2>
-          <p>Input form with floating placeholders and client side validation for a quick and easy to understand user experience.</p>
+          <p>Client side validation and floating placeholders</p>
           <img class="position-relative thumbnail" src="./img/form.png"></img>
         </div>
       </div>
+
     </div>
   </div>
   <!-- End of Main Content -->
 
   <!-- Footer -->
-  <footer class="navbar-fixed-bottom>
+  <footer>
     <!-- Footer Links -->
     <div class="container-fluid">
       <!-- Grid Row -->
@@ -115,6 +123,11 @@
         <!-- Grid Column -->
         <div class="col-lg-3 m-2">
           <a class="footer-links" id="f-email" href="mailto:caleb@cacopeland.com" target="_blank">caleb[@]cacopeland.com</a>
+        </div>
+
+        <!-- Grid Column -->
+        <div class="col-lg-3 m-2">
+          <a class="footer-links" id="f-github" href="https://github.com/caleb-copeland" target="_blank">Github</a>
         </div>
 
         <!-- Grid Column -->

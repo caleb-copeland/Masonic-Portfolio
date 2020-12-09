@@ -20,23 +20,31 @@
 
 <body>
   <!-- Fade-Out Body @ Load -->
-  <script>document.body.className += 'fade-out load';</script>
+  <script>
+    document.body.className += 'fade-out load';
+  </script>
 
   <header>
     <!--Navigation Bar-->
     <div class="container">
       <!-- Grid Row -->
-      <nav class="row mt-5 px-3 nav navbar-expand justify-content-between align-items-center" role="navigation">
+      <nav class="row mt-3 mt-lg-5 px-3 nav navbar-expand-lg navbar-light justify-content-between align-items-center" role="navigation">
         <!-- Grid Column -->
         <div class="justify-content-start">
           <!-- "Logo" -->
-          <a class="navbar-links" id="nav-logo" href="../index.html">C</a>
+          <a id="nav-logo" href="../index.html">C</a>
         </div>
+        <!-- Mobile Nav Toggler Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
         <!-- Grid Column -->
-        <div class="navbar-nav justify-content-end align-middle">
-          <!-- Links -->
-          <a class="navigation-links" id="projects-nav" href="../index.html">Projects</a>
-          <a class="navigation-links" id="about-nav" href="./about.html">About</a>
+        <div class="collapse navbar-collapse justify-content-end align-middle" id="navbarSupportedContent">
+          <div class="navbar-nav position-relative">
+            <!-- Links -->
+            <a class="nav-link" id="projects-nav" href="../index.html">Projects</a>
+            <a class="nav-link" id="about-nav" href="./about.html">About</a>
+          </div>
         </div>
       </nav>
     </div>
@@ -48,16 +56,16 @@
     <!-- Grid Row -->
     <div class="row my-5 justify-content-center">
       <!-- Grid Colum -->
-      <div class="col-lg-6 my-1 my-lg-0">
+      <div class="col-lg-6 my-4 my-lg-0">
         <h1>I am a 30 year old web designer currently working as a freelancer based in Grand Rapids, Michigan</h1>
       </div>
-        <div class="col-lg-6 my-1 my-lg-0">
-          <div class="position-relative p-4 overflow-hidden text-left disable-select portfolio-card" id="about-intro">
-            <h1 class="position-relative">[Hello There!]</h1>
-            <h2 class="position-absolute">↑↑↑</h2>
-            <img class="position-relative thumbnail" src="../img/about-caleb@0.5x.jpg" alt="Photo of me Caleb Copeland"></img>
-          </div>
+      <div class="col-lg-6 my-1 my-lg-0">
+        <div class="position-relative p-4 overflow-hidden text-left disable-select portfolio-card" id="about-intro">
+          <h1 class="position-relative fade-in">[Hello There!]</h1>
+          <h2 class="position-absolute">↑↑↑</h2>
+          <img class="position-relative thumbnail" src="../img/about-caleb@0.5x.jpg" alt="Photo of me Caleb Copeland"></img>
         </div>
+      </div>
 
     </div>
 
@@ -68,7 +76,7 @@
   <!-- End of Main Content -->
 
   <!-- Footer -->
-  <footer class="navbar-fixed-bottom">
+  <footer>
     <!-- Footer Links -->
     <div class="container-fluid">
       <!-- Grid Row -->
@@ -76,6 +84,11 @@
         <!-- Grid Column -->
         <div class="col-lg-3 m-2">
           <a class="footer-links" id="f-email" href="mailto:caleb@cacopeland.com" target="_blank">caleb[@]cacopeland.com</a>
+        </div>
+
+        <!-- Grid Column -->
+        <div class="col-lg-3 m-2">
+          <a class="footer-links" id="f-github" href="https://github.com/caleb-copeland" target="_blank">Github</a>
         </div>
 
         <!-- Grid Column -->

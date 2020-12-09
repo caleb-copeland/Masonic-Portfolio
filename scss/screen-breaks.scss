@@ -1,0 +1,22 @@
+// Small Screen
+@mixin screen-breaks {
+  @media only screen and (max-width: 768px) {
+    html {
+      font-size: 15px;
+    }
+
+    #nav-logo {
+      font-size: 3rem;
+    }
+
+    .navigation-links, .footer-links {
+      font-size: 1.5rem;
+    }
+  }
+  // Xtra-Small Screen
+  @media only screen and (max-width: 576px) {
+    html {
+      font-size: 14px;
+    }
+  }
+}

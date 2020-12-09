@@ -1,10 +1,13 @@
 @use 'base'; // Global Styles
 @use 'fonts'; // Google Fonts and Font-Variables
 @use 'colors'; // Color Variables
-@import 'mixin'; // Mixins
+@import 'mixins'; // Portfolio Card Mixin
+@import 'screen-breaks'; // Screen Break Formatting Mixin
 /*---------------------------------------*/
 /*---------- Navigation Styles ----------*/
 /*---------------------------------------*/
+// * { border: 1px solid red;}
+
 #nav-logo {
   margin-top: 0;
   color: colors.$dark-blue;
@@ -17,23 +20,26 @@
   }
 }
 
-.navigation-links {
+.nav-link {
+  position: relative;
+  padding: 0;
   font-size: 1.25rem;
   text-shadow: 0.05rem 0.05rem 0 #000;
-  transition: text-shadow 0.5s ease;
-  // On Hover...
-  &:hover {
-    text-shadow: 0.08rem 0.08rem 0 #000;
-  }
 }
 
 #projects-nav {
-  margin-right: 1rem;
+  margin-right: 1.5rem;
   color: colors.$teal;
+  @include link-underline (colors.$teal)
 }
 
 #about-nav {
   color: colors.$orange;
+  @include link-underline (colors.$orange);
+}
+
+.navbar-toggler {
+  border: none;
 }
 /*------------------------------------------*/
 /*---------- Projects Body Styles ----------*/
@@ -57,6 +63,10 @@
       left: 0;
       z-index: 1;
     }
+  }
+
+  p {
+    padding-right: 20%;
   }
 
   .thumbnail {
@@ -85,7 +95,7 @@
     @include card-style ('form');
   }
   // Shadow at the bottom  of the card to add a 'pocket' effect...
-  &::after {
+  &:after {
     display: block;
     position: absolute;
     height: 1rem;
@@ -96,10 +106,16 @@
     box-shadow: 0 0 1rem #000;
   }
 }
+
+#short-about {
+  a {
+    @include link-underline (colors.$dark-blue);
+  }
+}
+
 /*---------------------------------------*/
 /*---------- About Body Styles ----------*/
 /*---------------------------------------*/
-* { border: 1px solid red;}
 #about-intro {
   background-color: colors.$orange;
 
@@ -114,10 +130,11 @@
     top: 1.5rem;
     left: 10%;
     font-size: 1.5rem;
+    z-index: -1;
   }
 
   h2 {
-    top: -0.25rem;
+    top: -0.5rem;
     right: 15%;
     font-size: 4rem;
   }
@@ -130,7 +147,9 @@
   &:hover {
     h1 {
       top: 1rem;
+      z-index: 0;
     }
+
     h2 {
       top: 5rem;
     }
@@ -156,24 +175,34 @@
 /*---------- Footer Styles ----------*/
 /*-----------------------------------*/
 footer {
-  margin-top: 2rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 5rem;
   background-color: colors.$really-really-see-through-black;
 }
 
 .footer-links {
-  font-size: 1.25rem;
+  font-size: 1.26rem;
   text-shadow: 0.05rem 0.05rem 0 #000;
   transition: text-shadow 0.5s ease;
 }
 
-.footer-links:hover {
-  text-shadow: 0.05rem 0.05rem 0 #666666, 0.075em 0.075rem 0 #333333, 0.1em 0.1rem 0 #000;
+#f-email {
+  color: colors.$dark-blue;
+  @include link-underline (colors.$dark-blue);
 }
 
-#f-email {
-  color: #6872a6;
+#f-github {
+  color: colors.$teal;
+  @include link-underline (colors.$teal);
 }
 
 #f-codepen {
-  color: #d9725b;
+  color: colors.$orange;
+  @include link-underline (colors.$orange);
 }
+/*---------------------------------------------*/
+/*---------- Screen Break Formatting ----------*/
+/*---------------------------------------------*/
+@include screen-breaks;
