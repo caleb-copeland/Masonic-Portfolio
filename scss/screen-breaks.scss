@@ -1,22 +1,36 @@
 // Small Screen
 @mixin screen-breaks {
+  ////////// < Large Breakpoint //////////
+  @media only screen and (max-width: 992px) {}
+  ////////// < Medium Breakpoint //////////
   @media only screen and (max-width: 768px) {
-    html {
-      font-size: 15px;
+    html,
+    body {
+      font-size: 18px;
     }
 
     #nav-logo {
       font-size: 3rem;
     }
 
-    .navigation-links, .footer-links {
+    .footer-links,
+    .navigation-links {
       font-size: 1.5rem;
     }
+    // About Page Table Content //
+    .about-table {
+      font-size: 1rem;
+
+      .location {
+        font-size: 0.9rem;
+      }
+    }
   }
-  // Xtra-Small Screen
+  ////////// < Small Breakpoint //////////
   @media only screen and (max-width: 576px) {
-    html {
-      font-size: 14px;
+    html,
+    body {
+      font-size: 16px;
     }
   }
 }

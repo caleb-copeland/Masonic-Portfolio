@@ -27,11 +27,15 @@ body {
   transition: all 0.75s ease-in-out;
 }
 
-.full-wrapper{}
-
 h1 {
   font-family: fonts.$raleway;
   font-size: 2.5rem;
+  font-weight: 800;
+}
+
+h4 {
+  font-family: fonts.$raleway;
+  font-size: 1rem;
   font-weight: 800;
 }
 
@@ -43,6 +47,13 @@ a {
   &:hover {
     text-decoration: none;
   }
+}
+
+.divider {
+  position: relative;
+  height: 1px;
+  width: 100%;
+  background-color: #ccc;
 }
 /*---------- Fade-Out ----------*/
 .fade-out {

@@ -6,8 +6,8 @@
     position: absolute;
     height: 5px;
     width: 0;
-    transition: width 0.5s ease;
     margin-top: 5px;
+    transition: width 0.5s ease;
     content: '';
   }
 
@@ -36,6 +36,27 @@
     &:after {
       transition: width 0.4s ease;
     }
+  }
+}
+////////// Paragraph Accent Line //////////
+@mixin paragraph-accent-line ($color, $position, $shadow-vert, $shadow-hor) {
+  margin-#{$position}: 0.5rem; // Left OR Right Margin
+  padding-#{$position}: 0.5rem; // Left OR Right Padding
+  text-align: #{$position}; // Left OR Right
+
+  &:after {
+    position: absolute;
+    height: 98%;
+    width: 5px;
+    top: 0.2rem;
+    #{$position}: -0.75rem; // Left OR Right position
+    background-color: $color;
+    box-shadow:  $shadow-vert+rem $shadow-hor+rem 0 #000;
+    transition: box-shadow 0.5s ease;
+    content: '';
+  }
+  &:hover:after {
+    box-shadow: $shadow-vert*2rem $shadow-hor*2rem 0 #000;
   }
 }
 ////////// Individual Card Styles ////////////

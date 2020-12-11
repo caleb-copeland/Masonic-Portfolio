@@ -6,8 +6,6 @@
 /*---------------------------------------*/
 /*---------- Navigation Styles ----------*/
 /*---------------------------------------*/
-// * { border: 1px solid red;}
-
 #nav-logo {
   margin-top: 0;
   color: colors.$dark-blue;
@@ -112,28 +110,27 @@
     @include link-underline (colors.$dark-blue);
   }
 }
-
 /*---------------------------------------*/
 /*---------- About Body Styles ----------*/
 /*---------------------------------------*/
 #about-intro {
   background-color: colors.$orange;
 
-  h1,
-  h2 {
+  h2,
+  h3 {
     font-family: fonts.$anonymous;
     text-shadow: 0.125rem 0.125rem 0 #000;
     transition: all 0.5s ease;
   }
 
-  h1 {
+  h2 {
     top: 1.5rem;
     left: 10%;
     font-size: 1.5rem;
-    z-index: -1;
+    font-weight: 700;
   }
 
-  h2 {
+  h3 {
     top: -0.5rem;
     right: 15%;
     font-size: 4rem;
@@ -145,12 +142,11 @@
   }
 
   &:hover {
-    h1 {
+    h2 {
       top: 1rem;
-      z-index: 0;
     }
 
-    h2 {
+    h3 {
       top: 5rem;
     }
 
@@ -171,6 +167,56 @@
     box-shadow: 0 0 1rem #000;
   }
 }
+
+#about-text-1 {
+  @include paragraph-accent-line(colors.$dark-blue, "left", 0.1, 0.1);
+}
+
+#about-text-2 {
+  @include paragraph-accent-line(colors.$yellow, "right", -0.1 , 0.1);
+}
+
+.about-table {
+  position: relative;
+  padding-inline-start: 0;
+
+  .row {
+    position: relative;
+    margin: 3rem 0 0;
+    padding: 0;
+    justify-content: center;
+
+    div {
+      padding: 0;
+    }
+  }
+
+  .job,
+  .school {
+    margin: 0;
+
+    span {
+      color: #999;
+    }
+  }
+
+  .location,
+  .field {
+    font-family: fonts.$raleway;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #666;
+  }
+
+  .date,
+  .gpa {
+    text-align: right;
+  }
+}
+
+* {
+  // border: 1px solid red;
+}
 /*-----------------------------------*/
 /*---------- Footer Styles ----------*/
 /*-----------------------------------*/
@@ -180,12 +226,16 @@ footer {
   width: 100%;
   margin-top: 5rem;
   background-color: colors.$really-really-see-through-black;
-}
 
-.footer-links {
-  font-size: 1.26rem;
-  text-shadow: 0.05rem 0.05rem 0 #000;
-  transition: text-shadow 0.5s ease;
+  div {
+    align-items: center;
+  }
+
+  .footer-links {
+    font-size: 1.26rem;
+    text-shadow: 0.05rem 0.05rem 0 #000;
+    transition: text-shadow 0.5s ease;
+  }
 }
 
 #f-email {

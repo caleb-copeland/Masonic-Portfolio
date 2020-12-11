@@ -35,6 +35,12 @@ h1 {
   font-weight: 800;
 }
 
+h4 {
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
 a {
   position: relative;
   color: #6872a6;
@@ -42,6 +48,13 @@ a {
 }
 a:hover {
   text-decoration: none;
+}
+
+.divider {
+  position: relative;
+  height: 1px;
+  width: 100%;
+  background-color: #ccc;
 }
 
 /*---------- Fade-Out ----------*/
@@ -82,8 +95,8 @@ a:hover {
   position: absolute;
   height: 5px;
   width: 0;
-  transition: width 0.5s ease;
   margin-top: 5px;
+  transition: width 0.5s ease;
   content: "";
 }
 #projects-nav:before {
@@ -113,8 +126,8 @@ a:hover {
   position: absolute;
   height: 5px;
   width: 0;
-  transition: width 0.5s ease;
   margin-top: 5px;
+  transition: width 0.5s ease;
   content: "";
 }
 #about-nav:before {
@@ -223,8 +236,8 @@ a:hover {
   position: absolute;
   height: 5px;
   width: 0;
-  transition: width 0.5s ease;
   margin-top: 5px;
+  transition: width 0.5s ease;
   content: "";
 }
 #short-about a:before {
@@ -253,19 +266,19 @@ a:hover {
 #about-intro {
   background-color: #d9725b;
 }
-#about-intro h1,
-#about-intro h2 {
+#about-intro h2,
+#about-intro h3 {
   font-family: "Anonymous Pro", courier, monospace, serif;
   text-shadow: 0.125rem 0.125rem 0 #000;
   transition: all 0.5s ease;
 }
-#about-intro h1 {
+#about-intro h2 {
   top: 1.5rem;
   left: 10%;
   font-size: 1.5rem;
-  z-index: -1;
+  font-weight: 700;
 }
-#about-intro h2 {
+#about-intro h3 {
   top: -0.5rem;
   right: 15%;
   font-size: 4rem;
@@ -274,11 +287,10 @@ a:hover {
   bottom: -6rem;
   transition: all 0.5s ease;
 }
-#about-intro:hover h1 {
-  top: 1rem;
-  z-index: 0;
-}
 #about-intro:hover h2 {
+  top: 1rem;
+}
+#about-intro:hover h3 {
   top: 5rem;
 }
 #about-intro:hover .thumbnail {
@@ -296,6 +308,79 @@ a:hover {
   box-shadow: 0 0 1rem #000;
 }
 
+#about-text-1 {
+  margin-left: 0.5rem;
+  padding-left: 0.5rem;
+  text-align: left;
+}
+#about-text-1:after {
+  position: absolute;
+  height: 98%;
+  width: 5px;
+  top: 0.2rem;
+  left: -0.75rem;
+  background-color: #6872a6;
+  box-shadow: 0.1rem 0.1rem 0 #000;
+  transition: box-shadow 0.5s ease;
+  content: "";
+}
+#about-text-1:hover:after {
+  box-shadow: 0.2rem 0.2rem 0 #000;
+}
+
+#about-text-2 {
+  margin-right: 0.5rem;
+  padding-right: 0.5rem;
+  text-align: right;
+}
+#about-text-2:after {
+  position: absolute;
+  height: 98%;
+  width: 5px;
+  top: 0.2rem;
+  right: -0.75rem;
+  background-color: #f2b872;
+  box-shadow: -0.1rem 0.1rem 0 #000;
+  transition: box-shadow 0.5s ease;
+  content: "";
+}
+#about-text-2:hover:after {
+  box-shadow: -0.2rem 0.2rem 0 #000;
+}
+
+.about-table {
+  position: relative;
+  padding-inline-start: 0;
+}
+.about-table .row {
+  position: relative;
+  margin: 3rem 0 0;
+  padding: 0;
+  justify-content: center;
+}
+.about-table .row div {
+  padding: 0;
+}
+.about-table .job,
+.about-table .school {
+  margin: 0;
+}
+.about-table .job span,
+.about-table .school span {
+  color: #999;
+}
+.about-table .location,
+.about-table .field {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #666;
+}
+.about-table .date,
+.about-table .gpa {
+  text-align: right;
+}
+
 /*-----------------------------------*/
 /*---------- Footer Styles ----------*/
 /*-----------------------------------*/
@@ -306,8 +391,10 @@ footer {
   margin-top: 5rem;
   background-color: rgba(0, 0, 0, 0.02);
 }
-
-.footer-links {
+footer div {
+  align-items: center;
+}
+footer .footer-links {
   font-size: 1.26rem;
   text-shadow: 0.05rem 0.05rem 0 #000;
   transition: text-shadow 0.5s ease;
@@ -320,8 +407,8 @@ footer {
   position: absolute;
   height: 5px;
   width: 0;
-  transition: width 0.5s ease;
   margin-top: 5px;
+  transition: width 0.5s ease;
   content: "";
 }
 #f-email:before {
@@ -351,8 +438,8 @@ footer {
   position: absolute;
   height: 5px;
   width: 0;
-  transition: width 0.5s ease;
   margin-top: 5px;
+  transition: width 0.5s ease;
   content: "";
 }
 #f-github:before {
@@ -382,8 +469,8 @@ footer {
   position: absolute;
   height: 5px;
   width: 0;
-  transition: width 0.5s ease;
   margin-top: 5px;
+  transition: width 0.5s ease;
   content: "";
 }
 #f-codepen:before {
@@ -410,21 +497,31 @@ footer {
 /*---------- Screen Break Formatting ----------*/
 /*---------------------------------------------*/
 @media only screen and (max-width: 768px) {
-  html {
-    font-size: 15px;
+  html,
+body {
+    font-size: 18px;
   }
 
   #nav-logo {
     font-size: 3rem;
   }
 
-  .navigation-links, .footer-links {
+  .footer-links,
+.navigation-links {
     font-size: 1.5rem;
+  }
+
+  .about-table {
+    font-size: 1rem;
+  }
+  .about-table .location {
+    font-size: 0.9rem;
   }
 }
 @media only screen and (max-width: 576px) {
-  html {
-    font-size: 14px;
+  html,
+body {
+    font-size: 16px;
   }
 }
 
