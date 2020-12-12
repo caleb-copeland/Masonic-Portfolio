@@ -42,6 +42,7 @@ h4 {
 a {
   position: relative;
   color: colors.$dark-blue;
+  cursor: pointer;
   text-shadow: 0.03rem 0.03rem 0 #000;
 
   &:hover {
