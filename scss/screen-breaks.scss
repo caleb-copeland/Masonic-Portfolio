@@ -1,7 +1,7 @@
 @mixin screen-breaks {
   ////////// > Large Breakpoint //////////
   @media only screen and (min-width: 992px) {
-    $memVW: 7vw; // global VW variable for memory game
+    $memVW: 77px; // global VW variable for memory game
     // Style for each individual card in the memory game
     .card-display {
       height: $memVW - 2;
@@ -10,7 +10,7 @@
       font-size: $memVW - 3;
       border: ($memVW / 20) solid #fff;
       border-radius: $memVW / 6;
-      background-size: $memVW+2 $memVW+2;
+      background-size: 5rem 5rem;
       box-shadow: ($memVW / 20) ($memVW / 20) 0 #000;
 
       &.hover {
