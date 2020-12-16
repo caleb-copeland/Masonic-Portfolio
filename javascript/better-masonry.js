@@ -1,11 +1,8 @@
 $(document).ready(function() {
   /*---------- Set layout when page is loaded ----------*/
-  // Variable to hold current screen width
-  let screenWidth = $(window).width();
-  // Width of large screen break (px)
-  const largeScreen = 992;
-  // Width of x-large screen break (px)
-  const xtraLargeScreen = 1200;
+  let screenWidth = $(window).width(); // Variable to hold current screen width
+  const largeScreen = 992; // Width of large screen break (px)
+  const xtraLargeScreen = 1200; // Width of x-large screen break (px)
 
   $(document).ready(function() {
     // If screen width is greater than "largeScreen"...

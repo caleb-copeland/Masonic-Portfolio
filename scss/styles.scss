@@ -2,6 +2,7 @@
 @use 'fonts'; // Google Fonts and Font-Variables
 @use 'colors'; // Color Variables
 @use 'memory-game'; // Memory-Game Specific CSS
+@use 'roast-calc'; // Roast-Calc Specific CSS
 @import 'mixins'; // Portfolio Card Mixin
 @import 'screen-breaks'; // Screen Break Formatting Mixin
 /*---------------------------------------*/
@@ -29,12 +30,20 @@
 #projects-nav {
   margin-right: 1.5rem;
   color: colors.$teal;
-  @include link-underline (colors.$teal)
+  @include link-underline (colors.$teal);
+
+  &.active {
+    @include active-link-underline (colors.$teal);
+  }
 }
 
 #about-nav {
   color: colors.$orange;
   @include link-underline (colors.$orange);
+
+  &.active {
+    @include active-link-underline (colors.$orange);
+  }
 }
 
 .navbar-toggler {
@@ -223,30 +232,43 @@
 /*------------------------------------------------*/
 .project-wrapper {
   @import "memory-game";
-  background-color: #404459;
-  background-image: radial-gradient(circle at 50%, #656B8C 0, #404459 100%);
+  @import "roast-calc";
 }
 
 .code-nav {
   background-color: #444;
-}
 
-.code-tab {
-  margin: 0 1rem 0 0;
-  font-size: 1rem;
-  color: colors.$white-ish;
-  @include link-underline (colors.$white-ish);
-
-  &:hover {
+  .code-tab {
+    margin: 0 1rem 0 0;
+    font-size: 1rem;
     color: colors.$white-ish;
+    text-shadow: 0.1rem 0.1rem 0 #000;
+    @include link-underline (colors.$white-ish);
+
+    &.active {
+      @include active-link-underline (colors.$white-ish);
+    }
+
+    &:hover {
+      color: colors.$white-ish;
+    }
   }
 }
 
-.code-container {
-  font-size: 0.85rem;
+.code-wrapper {
+  height: auto;
+  max-height: 525px;
+  overflow: auto;
+
+  .code-container {
+    font-size: 0.85rem;
+
+    & > div {
+      display: none;
+    }
+  }
 }
 // TO SEE CSS FOR THE SPECIFIC PROJECTS SEE '_memory-game.scss', '_roast-calc.scss' AND '_input-form.scss'!!!
-
 /*-----------------------------------*/
 /*---------- Footer Styles ----------*/
 /*-----------------------------------*/

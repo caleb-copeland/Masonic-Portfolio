@@ -16,7 +16,10 @@ $(document).ready(function() {
 
   /*---------- FADE-OUT the page when a link is clicked ----------*/
   $('a').click(function(e) {
-    if ($(this).attr('target') != '_blank') {
+    if ($(this).hasClass('fade-link-js')) {
+      if ($(this).hasClass('nav-link')) {
+        $(this).attr('class', 'nav-link active fade-link-js')
+      }
       e.preventDefault();
       $('body').addClass('fade-out');
       var newLocation = this.href;

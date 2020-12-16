@@ -2,7 +2,7 @@
 /*---------- Google Fonts ----------*/
 /*----------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Cutive+Mono&display=swap");
 /*--------------------------------------*/
 /*---------- Base Site Styles ----------*/
 /*--------------------------------------*/
@@ -68,21 +68,23 @@ a:hover {
   transition: none;
 }
 
-.flex-column {
+#memory {
+  background-color: #404459;
+  background-image: radial-gradient(circle at 50%, #656B8C 0, #404459 100%);
+}
+#memory .flex-column {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
 }
-
-.flex-row {
+#memory .flex-row {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
 }
-
-.unselectable {
+#memory .unselectable {
   -webkit-user-select: none;
   /* Safari */
   -moz-user-select: none;
@@ -92,13 +94,11 @@ a:hover {
   user-select: none;
   /* Standard */
 }
-
-.board-border {
+#memory .board-border {
   border: 8px solid #fff;
   box-shadow: 0.5em 0.75em 0 #000, 20px 20px 30px rgba(0, 0, 0, 0.75);
 }
-
-.board {
+#memory .board {
   position: relative;
   height: auto;
   width: auto;
@@ -107,15 +107,13 @@ a:hover {
   border-left: 5px solid #4d4d4d;
   border-top: 5px solid #262626;
 }
-
-.board-row {
+#memory .board-row {
   display: block;
   position: relative;
   margin: 0;
   padding: 0;
 }
-
-.card-display {
+#memory .card-display {
   position: relative;
   top: 0;
   left: 0;
@@ -127,8 +125,7 @@ a:hover {
   cursor: default;
   transition: box-shadow 0.2s ease-in, top 0.2s linear, left 0.2s linear;
 }
-
-h1#project-main-heading {
+#memory h1#project-main-heading {
   display: inline-block;
   padding: 0;
   color: #656B8C;
@@ -137,8 +134,7 @@ h1#project-main-heading {
   grid-area: text;
   text-align: center;
 }
-
-#board-overlay {
+#memory #board-overlay {
   position: absolute;
   display: flex;
   flex-flow: column nowrap;
@@ -149,20 +145,17 @@ h1#project-main-heading {
   justify-centent: flex-start;
   align-items: center;
 }
-
-#completed-heading {
+#memory #completed-heading {
   font-family: "Arvo", courier, monospace, serif;
   color: #656B8C;
 }
-
-#message-count {
+#memory #message-count {
   text-align: center;
 }
-#message-count span {
+#memory #message-count span {
   color: #656B8C;
 }
-
-#try-again-button {
+#memory #try-again-button {
   position: relative;
   background-color: #404459;
   font-family: "Arvo", serif;
@@ -171,17 +164,15 @@ h1#project-main-heading {
   box-shadow: 3px 3px 0 #000;
   transition: all 0.2s ease-in;
 }
-#try-again-button:hover {
+#memory #try-again-button:hover {
   box-shadow: 5px 5px 2px #000;
 }
-#try-again-button:focus {
+#memory #try-again-button:focus {
   outline: none;
 }
-
-.wiggle {
+#memory .wiggle {
   animation: wiggle-animation 0.75s ease 0.3s;
 }
-
 @keyframes wiggle-animation {
   0% {
     transform: rotate(0deg);
@@ -199,6 +190,237 @@ h1#project-main-heading {
     transform: rotate(0deg);
   }
 }
+
+#roast {
+  height: 650px;
+  overflow-y: scroll;
+  background-color: #2a828c;
+  background-image: radial-gradient(circle at 50%, #3f8e97 0, #2a828c 100%);
+  z-index: 1;
+  /* Form styles cleared */
+  /* ---------- Headings and Type ---------- */
+  /* ---------- Animations ---------- */
+}
+#roast h1,
+#roast h2 {
+  font-family: "Cutive Mono", monospace, serif;
+  text-align: center;
+}
+#roast h1 {
+  text-shadow: 0.1rem 0.1rem 0 #fff;
+}
+#roast h2 {
+  color: #fff;
+  font-size: 1.8rem;
+  text-shadow: 2px 2px 0 #000;
+  cursor: default;
+}
+#roast .project-title h1 {
+  font-size: 2rem;
+}
+#roast .calc-form,
+#roast input,
+#roast label {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  border: none;
+}
+#roast .input-container {
+  width: 80%;
+  margin-left: 10%;
+  margin-bottom: 1rem;
+  text-align: center;
+  box-shadow: 2px 2px 5px #000;
+}
+#roast .input-container .input-column {
+  height: 7rem;
+  padding: 1rem 0 0;
+  z-index: 2;
+  transition: all 0.3s ease-in-out;
+}
+#roast .input-container .input-column h2 {
+  font-size: 1.5rem;
+}
+#roast .input-container #fc-column {
+  background-color: #8c2703;
+}
+#roast .input-container #trt-column {
+  background-color: #f2784b;
+}
+#roast .input-container #dtr-column {
+  background-color: #d97971;
+}
+#roast .input-field,
+#roast .input-label {
+  position: absolute;
+  top: 3.25rem;
+  left: 25%;
+  height: 2.5rem;
+  width: 50%;
+  line-height: 2.5rem;
+  cursor: text;
+  font-family: monospace;
+  font-size: 1rem;
+  color: #000;
+  border: none;
+  transition: all 0.4s ease-in-out, padding 0.2s ease-in-out, font-weight 0s linear;
+}
+#roast .input-label {
+  background-color: #fff;
+  text-align: center;
+  color: #d3d3d3;
+  z-index: 1;
+}
+#roast #dtr-label:after {
+  position: absolute;
+  right: 0;
+  padding-right: 1rem;
+  content: "%";
+  transition: color 0.2s linear;
+}
+#roast .input-field {
+  background-color: transparent;
+  text-align: left;
+  padding-left: 3.75rem;
+  border-bottom: 3px solid black;
+  z-index: 2;
+}
+#roast .project-footer {
+  position: absolute;
+  bottom: -2rem;
+  right: 0;
+  padding-right: 1rem;
+  font-family: courier;
+}
+#roast .project-footer p {
+  display: inline;
+  padding: 0 0 0.1rem 0;
+  cursor: default;
+  transition: all 0.2s linear;
+}
+#roast .project-footer p #about {
+  left: 0;
+}
+#roast .project-footer p #author {
+  right: 0;
+}
+#roast #about-overlay {
+  position: absolute;
+  display: flex;
+  flex-flow: row nowrap;
+  height: auto;
+  min-height: 100% !important;
+  width: 100%;
+  top: 0;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+#roast #about-window {
+  position: relative;
+  display: inline-block;
+  height: auto;
+  width: 60rem;
+  max-width: 85%;
+  margin: 1rem 0 4rem;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 4px 4px 2px #000;
+  z-index: 3;
+}
+#roast .about-content {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  height: auto;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+#roast #graph-about {
+  height: auto;
+  width: 100%;
+}
+#roast #graph-about img {
+  height: auto;
+  width: 100%;
+}
+#roast .about-text {
+  height: auto;
+  width: 100%;
+}
+#roast #x-about {
+  position: absolute;
+  width: auto;
+  top: 5px;
+  right: 8px;
+  padding: 0;
+  font-size: 0.75rem;
+  cursor: default;
+  z-index: 1;
+  transition: all 0.4s ease-out;
+}
+#roast .about-content h1,
+#roast .about-content h2 {
+  height: auto;
+  width: 100%;
+  padding-bottom: 1rem;
+  font-size: 1.25rem;
+  color: #000;
+  text-shadow: 1px 1px 0 #000;
+}
+#roast p {
+  padding-bottom: 1rem;
+  font-family: courier;
+  font-size: 0.75rem;
+  line-height: 1.2rem;
+}
+#roast span.error-title,
+#roast span.term-title {
+  padding-right: 0.75rem;
+  font-weight: 600;
+}
+#roast span.error-title {
+  color: red;
+}
+#roast span.equation {
+  padding-top: 0.1rem;
+  font-style: italic;
+}
+#roast #fc-column.bg-hover {
+  background-color: rgba(140, 39, 3, 0.9);
+}
+#roast #trt-column.bg-hover {
+  background-color: rgba(242, 120, 75, 0.875);
+}
+#roast #dtr-column.bg-hover {
+  background-color: rgba(217, 121, 113, 0.9);
+}
+#roast .input-column.input-hover .input-field {
+  box-shadow: 3px 3px 0 #000;
+}
+#roast .input-column.perc #dtr-label::after {
+  color: #000;
+}
+#roast .input-column.focus .input-field {
+  outline: none;
+  box-shadow: 3px 5px 0 #000;
+}
+#roast .input-column.complete .input-field {
+  font-weight: 600;
+}
+#roast .input-column.calculate .input-field {
+  color: red;
+}
+#roast #about.hover,
+#roast #x-about.hover {
+  text-shadow: 1px 1px 0 black;
+  border-bottom: 0.25px solid black;
+}
+
 /*---------------------------------------*/
 /*---------- Navigation Styles ----------*/
 /*---------------------------------------*/
@@ -226,7 +448,7 @@ h1#project-main-heading {
 }
 #projects-nav:after, #projects-nav:before {
   position: absolute;
-  height: 5px;
+  height: 3px;
   width: 0;
   margin-top: 5px;
   transition: width 0.5s ease;
@@ -235,12 +457,12 @@ h1#project-main-heading {
 #projects-nav:before {
   bottom: -7px;
   left: 2.5px;
-  border-bottom: 3px solid #000;
+  background-color: #000;
 }
 #projects-nav:after {
   bottom: -5px;
   left: 0;
-  border-bottom: 3px solid #2d90a6;
+  background-color: #2d90a6;
 }
 #projects-nav:hover:after, #projects-nav:hover:before {
   width: 100%;
@@ -251,13 +473,32 @@ h1#project-main-heading {
 #projects-nav:hover:after {
   transition: width 0.4s ease;
 }
+#projects-nav.active:after, #projects-nav.active:before {
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  margin-top: 5px;
+  content: "";
+}
+#projects-nav.active:before {
+  bottom: -7px;
+  left: 2.5px;
+  background-color: #000;
+  transition: width 0.6s ease;
+}
+#projects-nav.active:after {
+  bottom: -5px;
+  left: 0;
+  background-color: #2d90a6;
+  transition: width 0.4s ease;
+}
 
 #about-nav {
   color: #d9725b;
 }
 #about-nav:after, #about-nav:before {
   position: absolute;
-  height: 5px;
+  height: 3px;
   width: 0;
   margin-top: 5px;
   transition: width 0.5s ease;
@@ -266,12 +507,12 @@ h1#project-main-heading {
 #about-nav:before {
   bottom: -7px;
   left: 2.5px;
-  border-bottom: 3px solid #000;
+  background-color: #000;
 }
 #about-nav:after {
   bottom: -5px;
   left: 0;
-  border-bottom: 3px solid #d9725b;
+  background-color: #d9725b;
 }
 #about-nav:hover:after, #about-nav:hover:before {
   width: 100%;
@@ -280,6 +521,25 @@ h1#project-main-heading {
   transition: width 0.6s ease;
 }
 #about-nav:hover:after {
+  transition: width 0.4s ease;
+}
+#about-nav.active:after, #about-nav.active:before {
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  margin-top: 5px;
+  content: "";
+}
+#about-nav.active:before {
+  bottom: -7px;
+  left: 2.5px;
+  background-color: #000;
+  transition: width 0.6s ease;
+}
+#about-nav.active:after {
+  bottom: -5px;
+  left: 0;
+  background-color: #d9725b;
   transition: width 0.4s ease;
 }
 
@@ -367,7 +627,7 @@ h1#project-main-heading {
 
 #short-about a:after, #short-about a:before {
   position: absolute;
-  height: 5px;
+  height: 3px;
   width: 0;
   margin-top: 5px;
   transition: width 0.5s ease;
@@ -376,12 +636,12 @@ h1#project-main-heading {
 #short-about a:before {
   bottom: -7px;
   left: 2.5px;
-  border-bottom: 3px solid #000;
+  background-color: #000;
 }
 #short-about a:after {
   bottom: -5px;
   left: 0;
-  border-bottom: 3px solid #6872a6;
+  background-color: #6872a6;
 }
 #short-about a:hover:after, #short-about a:hover:before {
   width: 100%;
@@ -522,13 +782,20 @@ h1#project-main-heading {
   /*---------- Google Fonts ----------*/
   /*----------------------------------*/
   @import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap");
-  @import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Cutive+Mono&display=swap");
   /*--------------------------------------*/
   /*---------- Base Site Styles ----------*/
   /*--------------------------------------*/
   /*---------- Fade-Out ----------*/
-  background-color: #404459;
-  background-image: radial-gradient(circle at 50%, #656B8C 0, #404459 100%);
+  /*----------------------------------*/
+  /*---------- Google Fonts ----------*/
+  /*----------------------------------*/
+  @import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Cutive+Mono&display=swap");
+  /*--------------------------------------*/
+  /*---------- Base Site Styles ----------*/
+  /*--------------------------------------*/
+  /*---------- Fade-Out ----------*/
 }
 .project-wrapper body,
 .project-wrapper html {
@@ -582,19 +849,23 @@ h1#project-main-heading {
 .project-wrapper .load {
   transition: none;
 }
-.project-wrapper .flex-column {
+.project-wrapper #memory {
+  background-color: #404459;
+  background-image: radial-gradient(circle at 50%, #656B8C 0, #404459 100%);
+}
+.project-wrapper #memory .flex-column {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
 }
-.project-wrapper .flex-row {
+.project-wrapper #memory .flex-row {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
 }
-.project-wrapper .unselectable {
+.project-wrapper #memory .unselectable {
   -webkit-user-select: none;
   /* Safari */
   -moz-user-select: none;
@@ -604,11 +875,11 @@ h1#project-main-heading {
   user-select: none;
   /* Standard */
 }
-.project-wrapper .board-border {
+.project-wrapper #memory .board-border {
   border: 8px solid #fff;
   box-shadow: 0.5em 0.75em 0 #000, 20px 20px 30px rgba(0, 0, 0, 0.75);
 }
-.project-wrapper .board {
+.project-wrapper #memory .board {
   position: relative;
   height: auto;
   width: auto;
@@ -617,13 +888,13 @@ h1#project-main-heading {
   border-left: 5px solid #4d4d4d;
   border-top: 5px solid #262626;
 }
-.project-wrapper .board-row {
+.project-wrapper #memory .board-row {
   display: block;
   position: relative;
   margin: 0;
   padding: 0;
 }
-.project-wrapper .card-display {
+.project-wrapper #memory .card-display {
   position: relative;
   top: 0;
   left: 0;
@@ -635,7 +906,7 @@ h1#project-main-heading {
   cursor: default;
   transition: box-shadow 0.2s ease-in, top 0.2s linear, left 0.2s linear;
 }
-.project-wrapper h1#project-main-heading {
+.project-wrapper #memory h1#project-main-heading {
   display: inline-block;
   padding: 0;
   color: #656B8C;
@@ -644,7 +915,7 @@ h1#project-main-heading {
   grid-area: text;
   text-align: center;
 }
-.project-wrapper #board-overlay {
+.project-wrapper #memory #board-overlay {
   position: absolute;
   display: flex;
   flex-flow: column nowrap;
@@ -655,17 +926,17 @@ h1#project-main-heading {
   justify-centent: flex-start;
   align-items: center;
 }
-.project-wrapper #completed-heading {
+.project-wrapper #memory #completed-heading {
   font-family: "Arvo", courier, monospace, serif;
   color: #656B8C;
 }
-.project-wrapper #message-count {
+.project-wrapper #memory #message-count {
   text-align: center;
 }
-.project-wrapper #message-count span {
+.project-wrapper #memory #message-count span {
   color: #656B8C;
 }
-.project-wrapper #try-again-button {
+.project-wrapper #memory #try-again-button {
   position: relative;
   background-color: #404459;
   font-family: "Arvo", serif;
@@ -674,13 +945,13 @@ h1#project-main-heading {
   box-shadow: 3px 3px 0 #000;
   transition: all 0.2s ease-in;
 }
-.project-wrapper #try-again-button:hover {
+.project-wrapper #memory #try-again-button:hover {
   box-shadow: 5px 5px 2px #000;
 }
-.project-wrapper #try-again-button:focus {
+.project-wrapper #memory #try-again-button:focus {
   outline: none;
 }
-.project-wrapper .wiggle {
+.project-wrapper #memory .wiggle {
   animation: wiggle-animation 0.75s ease 0.3s;
 }
 @keyframes wiggle-animation {
@@ -700,49 +971,357 @@ h1#project-main-heading {
     transform: rotate(0deg);
   }
 }
+.project-wrapper body,
+.project-wrapper html {
+  font-family: "Anonymous Pro", courier, monospace, serif;
+  font-size: 20px;
+  color: #000;
+  background-color: #f2f2f2;
+  overflow-x: hidden;
+}
+.project-wrapper html {
+  height: 100vh;
+  width: 100vw;
+}
+.project-wrapper body {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 100%;
+  min-width: 100%;
+  opacity: 1;
+  transition: all 0.75s ease-in-out;
+}
+.project-wrapper h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+.project-wrapper h4 {
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+}
+.project-wrapper a {
+  position: relative;
+  color: #6872a6;
+  cursor: pointer;
+  text-shadow: 0.03rem 0.03rem 0 #000;
+}
+.project-wrapper a:hover {
+  text-decoration: none;
+}
+.project-wrapper .divider {
+  position: relative;
+  height: 1px;
+  width: 100%;
+  background-color: #ccc;
+}
+.project-wrapper .fade-out {
+  opacity: 0;
+}
+.project-wrapper .load {
+  transition: none;
+}
+.project-wrapper #roast {
+  height: 650px;
+  overflow-y: scroll;
+  background-color: #2a828c;
+  background-image: radial-gradient(circle at 50%, #3f8e97 0, #2a828c 100%);
+  z-index: 1;
+  /* Form styles cleared */
+  /* ---------- Headings and Type ---------- */
+  /* ---------- Animations ---------- */
+}
+.project-wrapper #roast h1,
+.project-wrapper #roast h2 {
+  font-family: "Cutive Mono", monospace, serif;
+  text-align: center;
+}
+.project-wrapper #roast h1 {
+  text-shadow: 0.1rem 0.1rem 0 #fff;
+}
+.project-wrapper #roast h2 {
+  color: #fff;
+  font-size: 1.8rem;
+  text-shadow: 2px 2px 0 #000;
+  cursor: default;
+}
+.project-wrapper #roast .project-title h1 {
+  font-size: 2rem;
+}
+.project-wrapper #roast .calc-form,
+.project-wrapper #roast input,
+.project-wrapper #roast label {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  border: none;
+}
+.project-wrapper #roast .input-container {
+  width: 80%;
+  margin-left: 10%;
+  margin-bottom: 1rem;
+  text-align: center;
+  box-shadow: 2px 2px 5px #000;
+}
+.project-wrapper #roast .input-container .input-column {
+  height: 7rem;
+  padding: 1rem 0 0;
+  z-index: 2;
+  transition: all 0.3s ease-in-out;
+}
+.project-wrapper #roast .input-container .input-column h2 {
+  font-size: 1.5rem;
+}
+.project-wrapper #roast .input-container #fc-column {
+  background-color: #8c2703;
+}
+.project-wrapper #roast .input-container #trt-column {
+  background-color: #f2784b;
+}
+.project-wrapper #roast .input-container #dtr-column {
+  background-color: #d97971;
+}
+.project-wrapper #roast .input-field,
+.project-wrapper #roast .input-label {
+  position: absolute;
+  top: 3.25rem;
+  left: 25%;
+  height: 2.5rem;
+  width: 50%;
+  line-height: 2.5rem;
+  cursor: text;
+  font-family: monospace;
+  font-size: 1rem;
+  color: #000;
+  border: none;
+  transition: all 0.4s ease-in-out, padding 0.2s ease-in-out, font-weight 0s linear;
+}
+.project-wrapper #roast .input-label {
+  background-color: #fff;
+  text-align: center;
+  color: #d3d3d3;
+  z-index: 1;
+}
+.project-wrapper #roast #dtr-label:after {
+  position: absolute;
+  right: 0;
+  padding-right: 1rem;
+  content: "%";
+  transition: color 0.2s linear;
+}
+.project-wrapper #roast .input-field {
+  background-color: transparent;
+  text-align: left;
+  padding-left: 3.75rem;
+  border-bottom: 3px solid black;
+  z-index: 2;
+}
+.project-wrapper #roast .project-footer {
+  position: absolute;
+  bottom: -2rem;
+  right: 0;
+  padding-right: 1rem;
+  font-family: courier;
+}
+.project-wrapper #roast .project-footer p {
+  display: inline;
+  padding: 0 0 0.1rem 0;
+  cursor: default;
+  transition: all 0.2s linear;
+}
+.project-wrapper #roast .project-footer p #about {
+  left: 0;
+}
+.project-wrapper #roast .project-footer p #author {
+  right: 0;
+}
+.project-wrapper #roast #about-overlay {
+  position: absolute;
+  display: flex;
+  flex-flow: row nowrap;
+  height: auto;
+  min-height: 100% !important;
+  width: 100%;
+  top: 0;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+.project-wrapper #roast #about-window {
+  position: relative;
+  display: inline-block;
+  height: auto;
+  width: 60rem;
+  max-width: 85%;
+  margin: 1rem 0 4rem;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 4px 4px 2px #000;
+  z-index: 3;
+}
+.project-wrapper #roast .about-content {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  height: auto;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+.project-wrapper #roast #graph-about {
+  height: auto;
+  width: 100%;
+}
+.project-wrapper #roast #graph-about img {
+  height: auto;
+  width: 100%;
+}
+.project-wrapper #roast .about-text {
+  height: auto;
+  width: 100%;
+}
+.project-wrapper #roast #x-about {
+  position: absolute;
+  width: auto;
+  top: 5px;
+  right: 8px;
+  padding: 0;
+  font-size: 0.75rem;
+  cursor: default;
+  z-index: 1;
+  transition: all 0.4s ease-out;
+}
+.project-wrapper #roast .about-content h1,
+.project-wrapper #roast .about-content h2 {
+  height: auto;
+  width: 100%;
+  padding-bottom: 1rem;
+  font-size: 1.25rem;
+  color: #000;
+  text-shadow: 1px 1px 0 #000;
+}
+.project-wrapper #roast p {
+  padding-bottom: 1rem;
+  font-family: courier;
+  font-size: 0.75rem;
+  line-height: 1.2rem;
+}
+.project-wrapper #roast span.error-title,
+.project-wrapper #roast span.term-title {
+  padding-right: 0.75rem;
+  font-weight: 600;
+}
+.project-wrapper #roast span.error-title {
+  color: red;
+}
+.project-wrapper #roast span.equation {
+  padding-top: 0.1rem;
+  font-style: italic;
+}
+.project-wrapper #roast #fc-column.bg-hover {
+  background-color: rgba(140, 39, 3, 0.9);
+}
+.project-wrapper #roast #trt-column.bg-hover {
+  background-color: rgba(242, 120, 75, 0.875);
+}
+.project-wrapper #roast #dtr-column.bg-hover {
+  background-color: rgba(217, 121, 113, 0.9);
+}
+.project-wrapper #roast .input-column.input-hover .input-field {
+  box-shadow: 3px 3px 0 #000;
+}
+.project-wrapper #roast .input-column.perc #dtr-label::after {
+  color: #000;
+}
+.project-wrapper #roast .input-column.focus .input-field {
+  outline: none;
+  box-shadow: 3px 5px 0 #000;
+}
+.project-wrapper #roast .input-column.complete .input-field {
+  font-weight: 600;
+}
+.project-wrapper #roast .input-column.calculate .input-field {
+  color: red;
+}
+.project-wrapper #roast #about.hover,
+.project-wrapper #roast #x-about.hover {
+  text-shadow: 1px 1px 0 black;
+  border-bottom: 0.25px solid black;
+}
 
 .code-nav {
   background-color: #444;
 }
-
-.code-tab {
+.code-nav .code-tab {
   margin: 0 1rem 0 0;
   font-size: 1rem;
   color: #f2f2f2;
+  text-shadow: 0.1rem 0.1rem 0 #000;
 }
-.code-tab:after, .code-tab:before {
+.code-nav .code-tab:after, .code-nav .code-tab:before {
   position: absolute;
-  height: 5px;
+  height: 3px;
   width: 0;
   margin-top: 5px;
   transition: width 0.5s ease;
   content: "";
 }
-.code-tab:before {
+.code-nav .code-tab:before {
   bottom: -7px;
   left: 2.5px;
-  border-bottom: 3px solid #000;
+  background-color: #000;
 }
-.code-tab:after {
+.code-nav .code-tab:after {
   bottom: -5px;
   left: 0;
-  border-bottom: 3px solid #f2f2f2;
+  background-color: #f2f2f2;
 }
-.code-tab:hover:after, .code-tab:hover:before {
+.code-nav .code-tab:hover:after, .code-nav .code-tab:hover:before {
   width: 100%;
 }
-.code-tab:hover:before {
+.code-nav .code-tab:hover:before {
   transition: width 0.6s ease;
 }
-.code-tab:hover:after {
+.code-nav .code-tab:hover:after {
   transition: width 0.4s ease;
 }
-.code-tab:hover {
+.code-nav .code-tab.active:after, .code-nav .code-tab.active:before {
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  margin-top: 5px;
+  content: "";
+}
+.code-nav .code-tab.active:before {
+  bottom: -7px;
+  left: 2.5px;
+  background-color: #000;
+  transition: width 0.6s ease;
+}
+.code-nav .code-tab.active:after {
+  bottom: -5px;
+  left: 0;
+  background-color: #f2f2f2;
+  transition: width 0.4s ease;
+}
+.code-nav .code-tab:hover {
   color: #f2f2f2;
 }
 
-.code-container {
+.code-wrapper {
+  height: auto;
+  max-height: 525px;
+  overflow: auto;
+}
+.code-wrapper .code-container {
   font-size: 0.85rem;
+}
+.code-wrapper .code-container > div {
+  display: none;
 }
 
 /*-----------------------------------*/
@@ -769,7 +1348,7 @@ footer .footer-links {
 }
 #f-email:after, #f-email:before {
   position: absolute;
-  height: 5px;
+  height: 3px;
   width: 0;
   margin-top: 5px;
   transition: width 0.5s ease;
@@ -778,12 +1357,12 @@ footer .footer-links {
 #f-email:before {
   bottom: -7px;
   left: 2.5px;
-  border-bottom: 3px solid #000;
+  background-color: #000;
 }
 #f-email:after {
   bottom: -5px;
   left: 0;
-  border-bottom: 3px solid #6872a6;
+  background-color: #6872a6;
 }
 #f-email:hover:after, #f-email:hover:before {
   width: 100%;
@@ -800,7 +1379,7 @@ footer .footer-links {
 }
 #f-github:after, #f-github:before {
   position: absolute;
-  height: 5px;
+  height: 3px;
   width: 0;
   margin-top: 5px;
   transition: width 0.5s ease;
@@ -809,12 +1388,12 @@ footer .footer-links {
 #f-github:before {
   bottom: -7px;
   left: 2.5px;
-  border-bottom: 3px solid #000;
+  background-color: #000;
 }
 #f-github:after {
   bottom: -5px;
   left: 0;
-  border-bottom: 3px solid #2d90a6;
+  background-color: #2d90a6;
 }
 #f-github:hover:after, #f-github:hover:before {
   width: 100%;
@@ -831,7 +1410,7 @@ footer .footer-links {
 }
 #f-codepen:after, #f-codepen:before {
   position: absolute;
-  height: 5px;
+  height: 3px;
   width: 0;
   margin-top: 5px;
   transition: width 0.5s ease;
@@ -840,12 +1419,12 @@ footer .footer-links {
 #f-codepen:before {
   bottom: -7px;
   left: 2.5px;
-  border-bottom: 3px solid #000;
+  background-color: #000;
 }
 #f-codepen:after {
   bottom: -5px;
   left: 0;
-  border-bottom: 3px solid #d9725b;
+  background-color: #d9725b;
 }
 #f-codepen:hover:after, #f-codepen:hover:before {
   width: 100%;
@@ -861,111 +1440,121 @@ footer .footer-links {
 /*---------- Screen Break Formatting ----------*/
 /*---------------------------------------------*/
 @media only screen and (min-width: 992px) {
-  .card-display {
+  #memory .card-display {
     height: 75px;
     width: 75px;
     margin: 7.7px;
-    font-size: 74px;
+    font-size: 42px;
     border: 3.85px solid #fff;
     border-radius: 12.8333333333px;
     background-size: 5rem 5rem;
     box-shadow: 3.85px 3.85px 0 #000;
   }
-  .card-display.hover {
+  #memory .card-display.hover {
     top: -1.54px;
     left: -1.54px;
     box-shadow: 5.1333333333px 5.1333333333px 3.85px #000;
   }
-
-  .card-flipped {
+  #memory .card-flipped {
     border: 3.85px solid #000;
     box-shadow: 3.85px 3.85px 2.5666666667px #8448D9, -3.85px -3.85px 2.5666666667px #D53A33;
   }
-
-  h1#project-main-heading {
-    font-size: 25.6666666667px;
+  #memory h1#project-main-heading {
+    font-size: 38.5px;
     text-shadow: 1.925px 1.925px 0 #F2BEA0, -1.925px -1.925px 0 #D53A33, 20px 20px 30px rgba(0, 0, 0, 0.9);
   }
-  h1#project-main-heading span {
+  #memory h1#project-main-heading span {
     font-size: 30.8px;
   }
-
-  #completed-heading {
+  #memory #completed-heading {
     margin: 19.25px;
     font-size: 25.6666666667px;
     text-shadow: 1.925px 1.925px 0 #fff, -1.925px -1.925px 0 #F23005, 5px 10px 10px rgba(0, 0, 0, 0.9);
   }
-
-  #message-count {
+  #memory #message-count {
     margin-top: 19.25px;
     font-size: 15.4px;
   }
-  #message-count span {
+  #memory #message-count span {
     font-size: 25.6666666667px;
     text-shadow: 1.925px 1.925px 0 #fff, -1.925px -1.925px 0 #F23005, 5px 10px 10px rgba(0, 0, 0, 0.9);
   }
-
-  #try-again-button {
+  #memory #try-again-button {
     margin-top: 19.25px;
     padding: 7.7px;
     font-size: 12.8333333333px;
   }
-  #try-again-button:hover {
+  #memory #try-again-button:hover {
     text-shadow: 1.54px 1.54px #000, 10px 10px 10px rgba(0, 0, 0, 0.9);
   }
 }
 @media only screen and (max-width: 991px) {
-  .card-display {
+  #memory .card-display {
     height: 7vw;
     width: 7vw;
     margin: 0.9vw;
-    font-size: 6vw;
+    font-size: 4vw;
     border: 0.45vw solid #fff;
     border-radius: 1.5vw;
     background-size: 11vw 11vw;
     box-shadow: 0.45vw 0.45vw 0 #000;
   }
-  .card-display.hover {
+  #memory .card-display.hover {
     top: -0.18vw;
     left: -0.18vw;
     box-shadow: 0.6vw 0.6vw 0.45vw #000;
   }
-
-  .card-flipped {
+  #memory .card-flipped {
     border: 0.45vw solid #000;
     box-shadow: 0.45vw 0.45vw 0.3vw #8448D9, -0.45vw -0.45vw 0.3vw #D53A33;
   }
-
-  h1#project-main-heading {
-    font-size: 3vw;
+  #memory h1#project-main-heading {
+    font-size: 4.5vw;
     text-shadow: 0.225vw 0.225vw 0 #F2BEA0, -0.225vw -0.225vw 0 #D53A33, 20px 20px 30px rgba(0, 0, 0, 0.9);
   }
-  h1#project-main-heading span {
+  #memory h1#project-main-heading span {
     font-size: 3.6vw;
   }
-
-  #completed-heading {
+  #memory #completed-heading {
     margin: 2.25vw;
     font-size: 3vw;
     text-shadow: 0.225vw 0.225vw 0 #fff, -0.225vw -0.225vw 0 #F23005, 5px 10px 10px rgba(0, 0, 0, 0.9);
   }
-
-  #message-count {
+  #memory #message-count {
     margin-top: 2.25vw;
     font-size: 1.8vw;
   }
-  #message-count span {
+  #memory #message-count span {
     font-size: 3vw;
     text-shadow: 0.225vw 0.225vw 0 #fff, -0.225vw -0.225vw 0 #F23005, 5px 10px 10px rgba(0, 0, 0, 0.9);
   }
-
-  #try-again-button {
+  #memory #try-again-button {
     margin-top: 2.25vw;
     padding: 0.9vw;
     font-size: 1.5vw;
   }
-  #try-again-button:hover {
+  #memory #try-again-button:hover {
     text-shadow: 0.18vw 0.18vw #000, 10px 10px 10px rgba(0, 0, 0, 0.9);
+  }
+
+  #roast {
+    height: 400px;
+  }
+  #roast .input-container {
+    width: 95%;
+    margin-left: 2.5%;
+  }
+  #roast .input-container .input-column {
+    height: 10rem;
+  }
+  #roast .input-field,
+#roast .input-label {
+    top: 5.5rem;
+    left: 12.5%;
+    width: 75%;
+  }
+  #roast .input-field {
+    padding-left: 2.45rem;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -994,7 +1583,7 @@ html {
     height: 10vw;
     width: 10vw;
     margin: 1.2vw;
-    font-size: 9vw;
+    font-size: 7vw;
     border: 0.6vw solid #fff;
     border-radius: 2vw;
     background-size: 14vw 14vw;
@@ -1012,7 +1601,7 @@ html {
   }
 
   h1#project-main-heading {
-    font-size: 4vw;
+    font-size: 6vw;
     text-shadow: 0.3vw 0.3vw 0 #F2BEA0, -0.3vw -0.3vw 0 #D53A33, 20px 20px 30px rgba(0, 0, 0, 0.9);
   }
   h1#project-main-heading span {
@@ -1042,6 +1631,20 @@ html {
   #try-again-button:hover {
     text-shadow: 0.24vw 0.24vw #000, 10px 10px 10px rgba(0, 0, 0, 0.9);
   }
+
+  #roast {
+    height: 450px;
+  }
+  #roast .input-container .input-column {
+    height: 12rem;
+  }
+  #roast .input-field,
+#roast .input-label {
+    top: 7rem;
+  }
+  #roast .input-field {
+    padding-left: 1.7rem;
+  }
 }
 @media only screen and (max-width: 575px) {
   body,
@@ -1053,7 +1656,7 @@ html {
     height: 12vw;
     width: 12vw;
     margin: 1.4vw;
-    font-size: 11vw;
+    font-size: 9vw;
     border: 0.7vw solid #fff;
     border-radius: 2.3333333333vw;
     background-size: 16vw 16vw;
@@ -1071,7 +1674,7 @@ html {
   }
 
   h1#project-main-heading {
-    font-size: 4.6666666667vw;
+    font-size: 7vw;
     text-shadow: 0.35vw 0.35vw 0 #F2BEA0, -0.35vw -0.35vw 0 #D53A33, 20px 20px 30px rgba(0, 0, 0, 0.9);
   }
   h1#project-main-heading span {
@@ -1100,6 +1703,17 @@ html {
   }
   #try-again-button:hover {
     text-shadow: 0.28vw 0.28vw #000, 10px 10px 10px rgba(0, 0, 0, 0.9);
+  }
+
+  #roast .input-column {
+    height: 6rem;
+  }
+  #roast .input-field,
+#roast .input-label {
+    top: 6rem;
+  }
+  #roast .input-field {
+    padding-left: 2.3rem;
   }
 }
 @media only screen and (max-width: 350px) {
