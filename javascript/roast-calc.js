@@ -159,7 +159,7 @@ $(document).ready(function() {
     // Overwrite the current LABEL text to its original value
     document.getElementById(labelId).textContent = newText;
     // Shift the label one character to the right
-    label.style.paddingLeft = (inputLength * 0.55) + "rem";
+    label.style.paddingLeft = (inputLength * 0.65) + "rem";
   };
 
   /////////////////////////////////////////////////////////////////////////

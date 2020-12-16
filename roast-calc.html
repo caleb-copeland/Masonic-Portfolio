@@ -63,50 +63,45 @@
     </div>
     <!-- End of Title -->
 
+    <!-- Row that wraps the CALC and the CODE TAB -->
+    <div class="row px-3">
 
-
-
-
-
-
-
-
-
-    <div class="row">
-      <!-- Project Column -->
+      <!-- Project Column ONLY for the CALC -->
       <div class="col-lg-6 py-4 py-lg-3 project-wrapper" id="roast">
+        <!-- ROW for the CALC PROJECT TITLE -->
         <div class="row">
-          <div class="col d-flex flex-column project-title">
+          <div class="col project-title">
             <!-- Title -->
             <h1>Coffee Roasting Calculator</h1>
           </div>
         </div>
-        <div class="row">
-          <div class="col p-3 pb-lg-2 project">
 
-            <!-- Row [Holds the three input columns/rows -->
+        <!-- ROW for the CALC -->
+        <div class="row">
+          <div class="col pb-lg-2">
+
+            <!-- FORM [Holds the three input columns/rows -->
             <!-- Form -->
-            <form class="row input-container calc-form" id="input-container" action="#" method="get" name="calcForm" autocomplete="off">
+            <form class=" row input-container calc-form" id="input-container" action="#" method="get" name="calcForm" autocomplete="off">
               <!-- FC  -->
-              <div class="col-4 col-lg-12 input-column" id="fc-column">
+              <div class="col-12 col-sm-4 col-lg-12 input-column" id="fc-column">
                 <h2>First Crack Time</h2>
                 <label class="input-label" id="fc-label">mm:ss</label>
                 <input class="input-field" id="fc-input" inputmode="numeric" pattern="[0-9]*" tabindex="1"></input>
               </div>
               <!-- TRT -->
-              <div class="col-4 col-lg-12 input-column" id="trt-column">
+              <div class="col-12 col-sm-4 col-lg-12  input-column" id="trt-column">
                 <h2>Total Roast Time</h2>
                 <label class="input-label" id="trt-label">mm:ss</label>
                 <input class="input-field" id="trt-input" inputmode="numeric" pattern="[0-9]*" tabindex="2"></input>
               </div>
               <!-- DTR -->
-              <div class="col-4 col-lg-12 input-column" id="dtr-column">
+              <div class="col-12 col-sm-4 col-lg-12  input-column" id="dtr-column">
                 <h2>Dev. Time Ratio</h2>
                 <label class="input-label" id="dtr-label">##.##</label>
                 <input class="input-field" id="dtr-input" inputmode="numeric" pattern="[0-9]*" tabindex="3"></input>
               </div>
             </form>
-
 
             <!-- ? Button explains how it works -->
             <div class="project-footer">
@@ -121,6 +116,7 @@
               <div id="x-about">Exit</div>
               <div class="about-content">
                 <h1>Basic Coffee Roasting Terms</h1>
+                <p>[scroll down]</p>
                 <div id="graph-about">
                   <img src="https://i.imgur.com/O7OzUYr.jpg"></img>
                 </div>
@@ -146,16 +142,6 @@
 
       </div>
       <!-- End of Project Column -->
-
-
-
-
-
-
-
-
-
-
 
       <!-- Code Tabs -->
       <div class="col-lg-6 mt-3 mt-lg-0 p-0 p-lg-3 code-display">

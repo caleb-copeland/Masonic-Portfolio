@@ -223,18 +223,10 @@
     text-align: right;
   }
 }
-
-* {
-  // border: 1px solid red;
-}
+// * { border: 1px solid red;}
 /*------------------------------------------------*/
 /*---------- Project Page - Memory Game ----------*/
 /*------------------------------------------------*/
-.project-wrapper {
-  @import "memory-game";
-  @import "roast-calc";
-}
-
 .code-nav {
   background-color: #444;
 

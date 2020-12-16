@@ -1,5 +1,7 @@
 @mixin screen-breaks {
+  ////////////////////////////////////////
   ////////// > Large Breakpoint //////////
+  ////////////////////////////////////////
   @media only screen and (min-width: 992px) {
     ////////////////////////////////////////
     ////////// Memory Game Styles //////////
@@ -62,6 +64,19 @@
         &:hover {
           text-shadow: $memVW/50 $memVW/50 #000, 10px 10px 10px rgba(0, 0, 0, 0.9);
         }
+      }
+    }
+  }
+  ////////////////////////////////////////
+  ////////// < xtra-Large Breakpoint //////////
+  ////////////////////////////////////////
+  @media only screen and (max-width: 1199px) {
+    ////////////////////////////////////////////////
+    ////////// Roasting calculator Styles //////////
+    ////////////////////////////////////////////////
+    #roast {
+      .input-field {
+        padding-left: 2.6rem;
       }
     }
   }
@@ -136,26 +151,26 @@
     ////////// Roasting calculator Styles //////////
     ////////////////////////////////////////////////
     #roast {
-      height: 400px;
+      height: 20rem;
 
       .input-container {
         width: 95%;
         margin-left: 2.5%;
 
         .input-column {
-          height: 10rem;
+          height: 12rem;
         }
       }
 
       .input-field,
       .input-label {
-        top: 5.5rem;
+        top: 7rem;
         left: 12.5%;
         width: 75%;
       }
 
       .input-field {
-        padding-left: 2.45rem;
+        padding-left: 2.2rem;
       }
     }
   }
@@ -249,7 +264,7 @@
     ////////// Roasting calculator Styles //////////
     ////////////////////////////////////////////////
     #roast {
-      height: 450px;
+      height: 22.5rem;
 
       .input-container {
         .input-column {
@@ -259,10 +274,11 @@
 
       .input-field,
       .input-label {
-        top: 7rem;
+        top: 7.5rem;
       }
+
       .input-field {
-        padding-left: 1.7rem;
+        padding-left: 1.5rem;
       }
     }
   }
@@ -339,26 +355,86 @@
     ////////// Roasting calculator Styles //////////
     ////////////////////////////////////////////////
     #roast {
-      .input-column {
-        height: 6rem;
+      height: 34rem;
+
+      .input-container {
+        width: 20rem;
+        margin: auto;
+
+        .input-column {
+          height: 8rem;
+        }
       }
 
       .input-field,
       .input-label {
-        top: 6rem;
+        top: 4rem;
+        left: 12.5%;
+        height: 3rem;
+        width: 75%;
+        line-height: 3rem;
+        font-size: 1.25rem;
       }
+
       .input-field {
-        padding-left: 2.3rem;
+        padding-left: 5.5rem;
+      }
+    }
+  }
+  //////////////////////////////////////////////
+  ////////// Breakpoint for ROAST-CALC//////////
+  //////////////////////////////////////////////
+  @media only screen and (max-width: 425px) {
+    ////////////////////////////////////////////////
+    ////////// Roasting calculator Styles //////////
+    ////////////////////////////////////////////////
+    #roast {
+      height: 36rem;
+
+      .input-container {
+        width: 15rem;
+        margin: auto;
+
+        .input-column {
+          height: 9rem;
+        }
+      }
+
+      .input-field,
+      .input-label {
+        top: 5rem;
+      }
+
+      .input-field {
+        padding-left: 5.2rem;
       }
     }
   }
   ////////////////////////////////////////
   ////////// < Small Breakpoint //////////
   ////////////////////////////////////////
-  @media only screen and (max-width: 350px) {
+  @media only screen and (max-width: 357px) {
     body,
     html {
       font-size: 14px;
+    }
+    ////////////////////////////////////////////////
+    ////////// Roasting calculator Styles //////////
+    ////////////////////////////////////////////////
+    #roast {
+      height: 36rem;
+
+      .input-field {
+        padding-left: 3.5rem;
+      }
+    }
+  }
+  //////////////////////////////////////////////
+  ////////// Breakpoint for ROAST-CALC//////////
+  //////////////////////////////////////////////
+  @media only screen and (max-width: 312px) {
+    #roast {
+      height: 39rem;
     }
   }
 }

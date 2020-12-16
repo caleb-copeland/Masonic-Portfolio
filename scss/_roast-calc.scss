@@ -1,11 +1,10 @@
 @use 'base'; // Global Styles
 @use 'fonts'; // Google Fonts and Font-Variables
 @use 'colors'; // Color Variables
-// * { border: 1px solid red;}
+
 #roast {
-  height: 650px;
+  height: 32rem;
   overflow-y: scroll;
-  // overflow-x: hidden;
   background-color: #2a828c;
   background-image: radial-gradient(circle at 50%, #3f8e97 0, #2a828c 100%);
   z-index: 1;
@@ -32,6 +31,7 @@
   }
   /* Form styles cleared */
   .calc-form,
+  .input-area,
   input,
   label {
     -webkit-appearance: none;
@@ -49,12 +49,18 @@
 
     .input-column {
       height: 7rem;
-      padding: 1rem 0 0;
+      padding: 1rem;
       z-index: 2;
       transition: all 0.3s ease-in-out;
 
       h2 {
         font-size: 1.5rem;
+      }
+      .input-area {
+        position: relative;
+        display: flex;
+        flex-flow: column nowrap;
+        height: 3rem;
       }
     }
 
@@ -105,7 +111,7 @@
   .input-field {
     background-color: transparent;
     text-align: left;
-    padding-left: 3.75rem;
+    padding-left: 3.5rem;
     border-bottom: 3px solid black;
     z-index: 2;
   }
@@ -113,13 +119,13 @@
   .project-footer {
     position: absolute;
     bottom: -2rem;
-    right: 0;
+    right: 1rem;
     padding-right: 1rem;
     font-family: courier;
 
     p {
       display: inline;
-      padding: 0 0 0.1rem 0;
+      padding: 0 0 0.1rem;
       cursor: default;
       transition: all 0.2s linear;
 
@@ -206,6 +212,11 @@
     font-size: 1.25rem;
     color: #000;
     text-shadow: 1px 1px 0 #000;
+  }
+
+  .about-content p {
+    margin-top: -1rem;
+    padding: 0;
   }
 
   p {
