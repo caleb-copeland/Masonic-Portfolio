@@ -1,0 +1,256 @@
+@mixin memory-screen-breaks {
+  #memory {
+    ////////////////////////////////////////
+    ////////// > Large Breakpoint //////////
+    ////////////////////////////////////////
+    @media only screen and (min-width: 992px) {
+      $memVW: 77px; // global VW variable for memory game
+      // Style for each individual card in the memory game
+      .card-display {
+        height: $memVW - 2;
+        width: $memVW - 2;
+        margin: $memVW / 10;
+        font-size: $memVW - 35;
+        border: ($memVW / 20) solid #fff;
+        border-radius: $memVW / 4;
+        background-size: 5rem 5rem;
+        box-shadow: ($memVW / 20) ($memVW / 20) 0 #000;
+
+        &.hover {
+          top: -($memVW / 50);
+          left: -($memVW / 50);
+          box-shadow: $memVW/15 $memVW/15 $memVW/20 #000;
+        }
+      }
+      // Style for the cards in the memory game when "flipped"
+      .card-flipped {
+        border: ($memVW / 20) solid #000;
+        box-shadow: ($memVW / 20) ($memVW / 20) ($memVW / 30) #8448D9, ($memVW / -20) ($memVW / -20) ($memVW / 30) #D53A33;
+      }
+
+      h1#project-main-heading {
+        font-size: ($memVW / 2);
+        text-shadow: $memVW/40 $memVW/40 0 #F2BEA0, $memVW/-40 $memVW/-40 0 #D53A33, 20px 20px 30px rgba(0, 0, 0, 0.9);
+
+        span {
+          font-size: ($memVW / 2.5);
+        }
+      }
+
+      #completed-heading {
+        margin: ($memVW / 2);
+        font-size: ($memVW / 2);
+        text-shadow: $memVW/40 $memVW/40 0 #fff, $memVW/-40 $memVW/-40 0 #F23005, 5px 10px 10px rgba(0, 0, 0, 0.9);
+      }
+
+      #message-count {
+        margin-top: ($memVW / 4);
+        font-size: ($memVW / 3.5);
+
+        span {
+          font-size: ($memVW / 2);
+          text-shadow: $memVW/40 $memVW/40 0 #fff, $memVW/-40 $memVW/-40 0 #F23005, 5px 10px 10px rgba(0, 0, 0, 0.9);
+        }
+      }
+
+      #try-again-button {
+        margin-top: ($memVW / 4);
+        padding: ($memVW / 10);
+        font-size: ($memVW / 6);
+
+        &:hover {
+          text-shadow: $memVW/50 $memVW/50 #000, 10px 10px 10px rgba(0, 0, 0, 0.9);
+        }
+      }
+    }
+    ////////////////////////////////////////
+    ////////// < Large Breakpoint //////////
+    ////////////////////////////////////////
+    @media only screen and (max-width: 991px) {
+      $memVW: 9vw; // global VW variable for memory game
+      // Style for each individual card in the memory game
+      .card-display {
+        height: $memVW - 2;
+        width: $memVW - 2;
+        margin: $memVW / 10;
+        font-size: $memVW - 5;
+        border: ($memVW / 20) solid #fff;
+        border-radius: $memVW / 5;
+        background-size: $memVW+2 $memVW+2;
+        box-shadow: ($memVW / 20) ($memVW / 20) 0 #000;
+
+        &.hover {
+          top: -($memVW / 50);
+          left: -($memVW / 50);
+          box-shadow: $memVW/15 $memVW/15 $memVW/20 #000;
+        }
+      }
+      // Style for the cards in the memory game when "flipped"
+      .card-flipped {
+        border: ($memVW / 20) solid #000;
+        box-shadow: ($memVW / 20) ($memVW / 20) ($memVW / 30) #8448D9, ($memVW / -20) ($memVW / -20) ($memVW / 30) #D53A33;
+      }
+
+      h1#project-main-heading {
+        font-size: ($memVW / 2);
+        text-shadow: $memVW/40 $memVW/40 0 #F2BEA0, $memVW/-40 $memVW/-40 0 #D53A33, 20px 20px 30px rgba(0, 0, 0, 0.9);
+
+        span {
+          font-size: ($memVW / 2.5);
+        }
+      }
+
+      #completed-heading {
+        margin: ($memVW / 3);
+        font-size: ($memVW / 2);
+        text-shadow: $memVW/40 $memVW/40 0 #fff, $memVW/-40 $memVW/-40 0 #F23005, 5px 10px 10px rgba(0, 0, 0, 0.9);
+      }
+
+      #message-count {
+        margin-top: ($memVW / 4);
+        font-size: ($memVW / 3.5);
+
+        span {
+          font-size: ($memVW / 2);
+          text-shadow: $memVW/40 $memVW/40 0 #fff, $memVW/-40 $memVW/-40 0 #F23005, 5px 10px 10px rgba(0, 0, 0, 0.9);
+        }
+      }
+
+      #try-again-button {
+        margin-top: ($memVW / 4);
+        padding: ($memVW / 10);
+        font-size: ($memVW / 6);
+
+        &:hover {
+          text-shadow: $memVW/50 $memVW/50 #000, 10px 10px 10px rgba(0, 0, 0, 0.9);
+        }
+      }
+    }
+    /////////////////////////////////////////
+    ////////// < Medium Breakpoint //////////
+    /////////////////////////////////////////
+    @media only screen and (max-width: 767px) {
+      $memVW: 12vw; // global VW variable for memory game
+      // Style for each individual card in the memory game
+      .card-display {
+        height: $memVW - 2;
+        width: $memVW - 2;
+        margin: $memVW / 10;
+        font-size: $memVW - 5;
+        border: ($memVW / 20) solid #fff;
+        border-radius: $memVW / 5;
+        background-size: $memVW+2 $memVW+2;
+        box-shadow: ($memVW / 20) ($memVW / 20) 0 #000;
+
+        &.hover {
+          top: -($memVW / 50);
+          left: -($memVW / 50);
+          box-shadow: $memVW/15 $memVW/15 $memVW/20 #000;
+        }
+      }
+      // Style for the cards in the memory game when "flipped"
+      .card-flipped {
+        border: ($memVW / 20) solid #000;
+        box-shadow: ($memVW / 20) ($memVW / 20) ($memVW / 30) #8448D9, ($memVW / -20) ($memVW / -20) ($memVW / 30) #D53A33;
+      }
+
+      h1#project-main-heading {
+        font-size: ($memVW / 2);
+        text-shadow: $memVW/40 $memVW/40 0 #F2BEA0, $memVW/-40 $memVW/-40 0 #D53A33, 20px 20px 30px rgba(0, 0, 0, 0.9);
+
+        span {
+          font-size: ($memVW / 2.5);
+        }
+      }
+
+      #completed-heading {
+        margin: ($memVW / 3);
+        font-size: ($memVW / 2);
+        text-shadow: $memVW/40 $memVW/40 0 #fff, $memVW/-40 $memVW/-40 0 #F23005, 5px 10px 10px rgba(0, 0, 0, 0.9);
+      }
+
+      #message-count {
+        margin-top: ($memVW / 4);
+        font-size: ($memVW / 3.5);
+
+        span {
+          font-size: ($memVW / 2);
+          text-shadow: $memVW/40 $memVW/40 0 #fff, $memVW/-40 $memVW/-40 0 #F23005, 5px 10px 10px rgba(0, 0, 0, 0.9);
+        }
+      }
+
+      #try-again-button {
+        margin-top: ($memVW / 4);
+        padding: ($memVW / 10);
+        font-size: ($memVW / 6);
+
+        &:hover {
+          text-shadow: $memVW/50 $memVW/50 #000, 10px 10px 10px rgba(0, 0, 0, 0.9);
+        }
+      }
+    }
+    ////////////////////////////////////////
+    ////////// < Small Breakpoint //////////
+    ////////////////////////////////////////
+    @media only screen and (max-width: 575px) {
+      $memVW: 14vw; // global VW variable for memory game
+      // Style for each individual card in the memory game
+      .card-display {
+        height: $memVW - 2;
+        width: $memVW - 2;
+        margin: $memVW / 10;
+        font-size: $memVW - 5;
+        border: ($memVW / 20) solid #fff;
+        border-radius: $memVW / 5;
+        background-size: $memVW+2 $memVW+2;
+        box-shadow: ($memVW / 20) ($memVW / 20) 0 #000;
+
+        &.hover {
+          top: -($memVW / 50);
+          left: -($memVW / 50);
+          box-shadow: $memVW/15 $memVW/15 $memVW/20 #000;
+        }
+      }
+      // Style for the cards in the memory game when "flipped"
+      .card-flipped {
+        border: ($memVW / 20) solid #000;
+        box-shadow: ($memVW / 20) ($memVW / 20) ($memVW / 30) #8448D9, ($memVW / -20) ($memVW / -20) ($memVW / 30) #D53A33;
+      }
+
+      h1#project-main-heading {
+        font-size: ($memVW / 2);
+        text-shadow: $memVW/40 $memVW/40 0 #F2BEA0, $memVW/-40 $memVW/-40 0 #D53A33, 20px 20px 30px rgba(0, 0, 0, 0.9);
+
+        span {
+          font-size: ($memVW / 2.5);
+        }
+      }
+
+      #completed-heading {
+        margin: ($memVW / 3);
+        font-size: ($memVW / 2);
+        text-shadow: $memVW/40 $memVW/40 0 #fff, $memVW/-40 $memVW/-40 0 #F23005, 5px 10px 10px rgba(0, 0, 0, 0.9);
+      }
+
+      #message-count {
+        margin-top: ($memVW / 4);
+        font-size: ($memVW / 3.5);
+
+        span {
+          font-size: ($memVW / 2);
+          text-shadow: $memVW/40 $memVW/40 0 #fff, $memVW/-40 $memVW/-40 0 #F23005, 5px 10px 10px rgba(0, 0, 0, 0.9);
+        }
+      }
+
+      #try-again-button {
+        margin-top: ($memVW / 4);
+        padding: ($memVW / 10);
+        font-size: ($memVW / 6);
+
+        &:hover {
+          text-shadow: $memVW/50 $memVW/50 #000, 10px 10px 10px rgba(0, 0, 0, 0.9);
+        }
+      }
+    }
+  }
+}

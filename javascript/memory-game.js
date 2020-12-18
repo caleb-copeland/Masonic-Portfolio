@@ -240,7 +240,7 @@ const createBoard = () => {
       boardRow[i].appendChild(card);
     }
   }
-  //boardOverlay("completed"); // Test the "completed" screen by uncommenting this line!!!
+  boardOverlay("completed"); // Test the "completed" screen by uncommenting this line!!!
 };
 
 /////////////////////////////////////////////////////////////////

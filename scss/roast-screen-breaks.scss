@@ -1,0 +1,132 @@
+@mixin roast-screen-breaks {
+  #roast {
+    /////////////////////////////////////////////
+    ////////// < xtra-Large Breakpoint //////////
+    /////////////////////////////////////////////
+    @media only screen and (max-width: 1199px) {
+      ////////////////////////////////////////////////
+      ////////// Roasting calculator Styles //////////
+      #roast {
+        .input-field {
+          padding-left: 2.6rem;
+        }
+      }
+    }
+    ////////////////////////////////////////
+    ////////// < Large Breakpoint //////////
+    ////////////////////////////////////////
+    @media only screen and (max-width: 991px) {
+      height: 20rem;
+
+      .input-container {
+        width: 95%;
+        margin-left: 2.5%;
+
+        .input-column {
+          height: 12rem;
+        }
+      }
+
+      .input-field,
+      .input-label {
+        top: 7rem;
+        left: 12.5%;
+        width: 75%;
+      }
+
+      .input-field {
+        padding-left: 2.2rem;
+      }
+    }
+    /////////////////////////////////////////
+    ////////// < Medium Breakpoint //////////
+    /////////////////////////////////////////
+    @media only screen and (max-width: 767px) {
+      height: 22.5rem;
+
+      .input-container {
+        .input-column {
+          height: 12rem;
+        }
+      }
+
+      .input-field,
+      .input-label {
+        top: 7.5rem;
+      }
+
+      .input-field {
+        padding-left: 1.5rem;
+      }
+    }
+    ////////////////////////////////////////
+    ////////// < Small Breakpoint //////////
+    ////////////////////////////////////////
+    @media only screen and (max-width: 575px) {
+      height: 34rem;
+
+      .input-container {
+        width: 20rem;
+        margin: auto;
+
+        .input-column {
+          height: 8rem;
+        }
+      }
+
+      .input-field,
+      .input-label {
+        top: 4rem;
+        left: 12.5%;
+        height: 3rem;
+        width: 75%;
+        line-height: 3rem;
+        font-size: 1.25rem;
+      }
+
+      .input-field {
+        padding-left: 5.5rem;
+      }
+    }
+    /////////////////////////////////////////
+    ////////// Specific Break Point//////////
+    /////////////////////////////////////////
+    @media only screen and (max-width: 425px) {
+      height: 36rem;
+
+      .input-container {
+        width: 15rem;
+        margin: auto;
+
+        .input-column {
+          height: 9rem;
+        }
+      }
+
+      .input-field,
+      .input-label {
+        top: 5rem;
+      }
+
+      .input-field {
+        padding-left: 5.2rem;
+      }
+    }
+    ////////////////////////////////////////
+    ////////// < Small Breakpoint //////////
+    ////////////////////////////////////////
+    @media only screen and (max-width: 357px) {
+      height: 36rem;
+
+      .input-field {
+        padding-left: 3.5rem;
+      }
+    }
+    /////////////////////////////////////////
+    ////////// Specific Break Point//////////
+    /////////////////////////////////////////
+    @media only screen and (max-width: 312px) {
+      height: 39rem;
+    }
+  }
+}

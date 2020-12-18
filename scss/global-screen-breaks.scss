@@ -1,0 +1,46 @@
+@mixin global-screen-breaks {
+  /////////////////////////////////////////
+  ////////// < Medium Breakpoint //////////
+  /////////////////////////////////////////
+  @media only screen and (max-width: 767px) {
+    body,
+    html {
+      font-size: 18px;
+    }
+
+    #nav-logo {
+      font-size: 3rem;
+    }
+
+    .footer-links,
+    .navigation-links {
+      font-size: 1.5rem;
+    }
+    // About Page Table Content //
+    .about-table {
+      font-size: 1rem;
+
+      .location {
+        font-size: 0.9rem;
+      }
+    }
+  }
+  ////////////////////////////////////////
+  ////////// < Small Breakpoint //////////
+  ////////////////////////////////////////
+  @media only screen and (max-width: 575px) {
+    body,
+    html {
+      font-size: 16px;
+    }
+  }
+  ////////////////////////////////////////
+  ////////// < Small Breakpoint //////////
+  ////////////////////////////////////////
+  @media only screen and (max-width: 357px) {
+    body,
+    html {
+      font-size: 14px;
+    }
+  }
+}

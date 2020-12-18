@@ -1,8 +1,7 @@
 /*----------------------------------*/
 /*---------- Google Fonts ----------*/
 /*----------------------------------*/
-@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Cutive+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Arvo:wght@400;700&family=Cutive+Mono&display=swap");
 /*--------------------------------------*/
 /*---------- Base Site Styles ----------*/
 /*--------------------------------------*/
@@ -66,370 +65,6 @@ a:hover {
 
 .load {
   transition: none;
-}
-
-#memory {
-  background-color: #404459;
-  background-image: radial-gradient(circle at 50%, #656B8C 0, #404459 100%);
-}
-#memory .flex-column {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-}
-#memory .flex-row {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-}
-#memory .unselectable {
-  -webkit-user-select: none;
-  /* Safari */
-  -moz-user-select: none;
-  /* Firefox */
-  -ms-user-select: none;
-  /* IE10+/Edge */
-  user-select: none;
-  /* Standard */
-}
-#memory .board-border {
-  border: 8px solid #fff;
-  box-shadow: 0.5em 0.75em 0 #000, 20px 20px 30px rgba(0, 0, 0, 0.75);
-}
-#memory .board {
-  position: relative;
-  height: auto;
-  width: auto;
-  padding: 0.75em;
-  background-color: #f2bea0;
-  border-left: 5px solid #4d4d4d;
-  border-top: 5px solid #262626;
-}
-#memory .board-row {
-  display: block;
-  position: relative;
-  margin: 0;
-  padding: 0;
-}
-#memory .card-display {
-  position: relative;
-  top: 0;
-  left: 0;
-  background-repeat: no-repeat;
-  background-sizing: cover;
-  background-color: #fff;
-  text-align: center;
-  font-family: courier;
-  cursor: default;
-  transition: box-shadow 0.2s ease-in, top 0.2s linear, left 0.2s linear;
-}
-#memory h1#project-main-heading {
-  display: inline-block;
-  padding: 0;
-  color: #656B8C;
-  font-family: "Arvo", courier, monospace, serif;
-  transform: skew(-3deg) rotate(-3deg);
-  grid-area: text;
-  text-align: center;
-}
-#memory #board-overlay {
-  position: absolute;
-  display: flex;
-  flex-flow: column nowrap;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  justify-centent: flex-start;
-  align-items: center;
-}
-#memory #completed-heading {
-  font-family: "Arvo", courier, monospace, serif;
-  color: #656B8C;
-}
-#memory #message-count {
-  text-align: center;
-}
-#memory #message-count span {
-  color: #656B8C;
-}
-#memory #try-again-button {
-  position: relative;
-  background-color: #404459;
-  font-family: "Arvo", serif;
-  color: #fff;
-  border: 5px solid #fff;
-  box-shadow: 3px 3px 0 #000;
-  transition: all 0.2s ease-in;
-}
-#memory #try-again-button:hover {
-  box-shadow: 5px 5px 2px #000;
-}
-#memory #try-again-button:focus {
-  outline: none;
-}
-#memory .wiggle {
-  animation: wiggle-animation 0.75s ease 0.3s;
-}
-@keyframes wiggle-animation {
-  0% {
-    transform: rotate(0deg);
-  }
-  20% {
-    transform: rotate(-7.25deg);
-  }
-  50% {
-    transform: rotate(7.25deg);
-  }
-  90% {
-    transform: rotate(-3.25deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-#roast {
-  height: 32rem;
-  overflow-y: scroll;
-  background-color: #2a828c;
-  background-image: radial-gradient(circle at 50%, #3f8e97 0, #2a828c 100%);
-  z-index: 1;
-  /* Form styles cleared */
-  /* ---------- Headings and Type ---------- */
-  /* ---------- Animations ---------- */
-}
-#roast h1,
-#roast h2 {
-  font-family: "Cutive Mono", monospace, serif;
-  text-align: center;
-}
-#roast h1 {
-  text-shadow: 0.1rem 0.1rem 0 #fff;
-}
-#roast h2 {
-  color: #fff;
-  font-size: 1.8rem;
-  text-shadow: 2px 2px 0 #000;
-  cursor: default;
-}
-#roast .project-title h1 {
-  font-size: 2rem;
-}
-#roast .calc-form,
-#roast .input-area,
-#roast input,
-#roast label {
-  -webkit-appearance: none;
-  appearance: none;
-  border-radius: 0;
-  border: none;
-}
-#roast .input-container {
-  width: 80%;
-  margin-left: 10%;
-  margin-bottom: 1rem;
-  text-align: center;
-  box-shadow: 2px 2px 5px #000;
-}
-#roast .input-container .input-column {
-  height: 7rem;
-  padding: 1rem;
-  z-index: 2;
-  transition: all 0.3s ease-in-out;
-}
-#roast .input-container .input-column h2 {
-  font-size: 1.5rem;
-}
-#roast .input-container .input-column .input-area {
-  position: relative;
-  display: flex;
-  flex-flow: column nowrap;
-  height: 3rem;
-}
-#roast .input-container #fc-column {
-  background-color: #8c2703;
-}
-#roast .input-container #trt-column {
-  background-color: #f2784b;
-}
-#roast .input-container #dtr-column {
-  background-color: #d97971;
-}
-#roast .input-field,
-#roast .input-label {
-  position: absolute;
-  top: 3.25rem;
-  left: 25%;
-  height: 2.5rem;
-  width: 50%;
-  line-height: 2.5rem;
-  cursor: text;
-  font-family: monospace;
-  font-size: 1rem;
-  color: #000;
-  border: none;
-  transition: all 0.4s ease-in-out, padding 0.2s ease-in-out, font-weight 0s linear;
-}
-#roast .input-label {
-  background-color: #fff;
-  text-align: center;
-  color: #d3d3d3;
-  z-index: 1;
-}
-#roast #dtr-label:after {
-  position: absolute;
-  right: 0;
-  padding-right: 1rem;
-  content: "%";
-  transition: color 0.2s linear;
-}
-#roast .input-field {
-  background-color: transparent;
-  text-align: left;
-  padding-left: 3.5rem;
-  border-bottom: 3px solid black;
-  z-index: 2;
-}
-#roast .project-footer {
-  position: absolute;
-  bottom: -2rem;
-  right: 1rem;
-  padding-right: 1rem;
-  font-family: courier;
-}
-#roast .project-footer p {
-  display: inline;
-  padding: 0 0 0.1rem;
-  cursor: default;
-  transition: all 0.2s linear;
-}
-#roast .project-footer p #about {
-  left: 0;
-}
-#roast .project-footer p #author {
-  right: 0;
-}
-#roast #about-overlay {
-  position: absolute;
-  display: flex;
-  flex-flow: row nowrap;
-  height: auto;
-  min-height: 100% !important;
-  width: 100%;
-  top: 0;
-  justify-content: center;
-  align-items: flex-start;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 2;
-}
-#roast #about-window {
-  position: relative;
-  display: inline-block;
-  height: auto;
-  width: 60rem;
-  max-width: 85%;
-  margin: 1rem 0 4rem;
-  padding: 2rem;
-  background-color: #fff;
-  box-shadow: 4px 4px 2px #000;
-  z-index: 3;
-}
-#roast .about-content {
-  position: relative;
-  display: flex;
-  flex-flow: column nowrap;
-  height: auto;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1;
-}
-#roast #graph-about {
-  height: auto;
-  width: 100%;
-}
-#roast #graph-about img {
-  height: auto;
-  width: 100%;
-}
-#roast .about-text {
-  height: auto;
-  width: 100%;
-}
-#roast #x-about {
-  position: absolute;
-  width: auto;
-  top: 5px;
-  right: 8px;
-  padding: 0;
-  font-size: 0.75rem;
-  cursor: default;
-  z-index: 1;
-  transition: all 0.4s ease-out;
-}
-#roast .about-content h1,
-#roast .about-content h2 {
-  height: auto;
-  width: 100%;
-  padding-bottom: 1rem;
-  font-size: 1.25rem;
-  color: #000;
-  text-shadow: 1px 1px 0 #000;
-}
-#roast .about-content p {
-  margin-top: -1rem;
-  padding: 0;
-}
-#roast p {
-  padding-bottom: 1rem;
-  font-family: courier;
-  font-size: 0.75rem;
-  line-height: 1.2rem;
-}
-#roast span.error-title,
-#roast span.term-title {
-  padding-right: 0.75rem;
-  font-weight: 600;
-}
-#roast span.error-title {
-  color: red;
-}
-#roast span.equation {
-  padding-top: 0.1rem;
-  font-style: italic;
-}
-#roast #fc-column.bg-hover {
-  background-color: rgba(140, 39, 3, 0.9);
-}
-#roast #trt-column.bg-hover {
-  background-color: rgba(242, 120, 75, 0.875);
-}
-#roast #dtr-column.bg-hover {
-  background-color: rgba(217, 121, 113, 0.9);
-}
-#roast .input-column.input-hover .input-field {
-  box-shadow: 3px 3px 0 #000;
-}
-#roast .input-column.perc #dtr-label::after {
-  color: #000;
-}
-#roast .input-column.focus .input-field {
-  outline: none;
-  box-shadow: 3px 5px 0 #000;
-}
-#roast .input-column.complete .input-field {
-  font-weight: 600;
-}
-#roast .input-column.calculate .input-field {
-  color: red;
-}
-#roast #about.hover,
-#roast #x-about.hover {
-  text-shadow: 1px 1px 0 black;
-  border-bottom: 0.25px solid black;
 }
 
 /*---------------------------------------*/
@@ -664,138 +299,20 @@ a:hover {
   transition: width 0.4s ease;
 }
 
-/*---------------------------------------*/
-/*---------- About Body Styles ----------*/
-/*---------------------------------------*/
-#about-intro {
-  background-color: #d9725b;
-}
-#about-intro h2,
-#about-intro h3 {
-  font-family: "Anonymous Pro", courier, monospace, serif;
-  text-shadow: 0.125rem 0.125rem 0 #000;
-  transition: all 0.5s ease;
-}
-#about-intro h2 {
-  top: 1.5rem;
-  left: 10%;
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-#about-intro h3 {
-  top: -0.5rem;
-  right: 15%;
-  font-size: 4rem;
-}
-#about-intro .thumbnail {
-  bottom: -6rem;
-  transition: all 0.5s ease;
-}
-#about-intro:hover h2 {
-  top: 1rem;
-}
-#about-intro:hover h3 {
-  top: 5rem;
-}
-#about-intro:hover .thumbnail {
-  bottom: -8rem;
-  z-index: 1;
-}
-#about-intro::after {
-  display: block;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  content: "";
-  box-shadow: 0 0 1rem #000;
-}
-
-#about-text-1 {
-  margin-left: 0.5rem;
-  padding-left: 0.5rem;
-  text-align: left;
-}
-#about-text-1:after {
-  position: absolute;
-  height: 98%;
-  width: 5px;
-  top: 0.2rem;
-  left: -0.75rem;
-  background-color: #6872a6;
-  box-shadow: 0.1rem 0.1rem 0 #000;
-  transition: box-shadow 0.5s ease;
-  content: "";
-}
-#about-text-1:hover:after {
-  box-shadow: 0.2rem 0.2rem 0 #000;
-}
-
-#about-text-2 {
-  margin-right: 0.5rem;
-  padding-right: 0.5rem;
-  text-align: right;
-}
-#about-text-2:after {
-  position: absolute;
-  height: 98%;
-  width: 5px;
-  top: 0.2rem;
-  right: -0.75rem;
-  background-color: #f2b872;
-  box-shadow: -0.1rem 0.1rem 0 #000;
-  transition: box-shadow 0.5s ease;
-  content: "";
-}
-#about-text-2:hover:after {
-  box-shadow: -0.2rem 0.2rem 0 #000;
-}
-
-.about-table {
-  position: relative;
-  padding-inline-start: 0;
-}
-.about-table .row {
-  position: relative;
-  margin: 3rem 0 0;
-  padding: 0;
-  justify-content: center;
-}
-.about-table .row div {
-  padding: 0;
-}
-.about-table .job,
-.about-table .school {
-  margin: 0;
-}
-.about-table .job span,
-.about-table .school span {
-  color: #999;
-}
-.about-table .field,
-.about-table .location {
-  font-family: "Raleway", sans-serif;
-  font-weight: 600;
-  font-size: 0.9rem;
-  color: #666;
-}
-.about-table .date,
-.about-table .gpa {
-  text-align: right;
-}
-
 /*------------------------------------------------*/
 /*---------- Project Page - Memory Game ----------*/
 /*------------------------------------------------*/
 .code-nav {
   background-color: #444;
+  /*---------- Each individual link in the code nav is a "code-tab" ----------*/
 }
 .code-nav .code-tab {
   margin: 0 1rem 0 0;
   font-size: 1rem;
   color: #f2f2f2;
   text-shadow: 0.1rem 0.1rem 0 #000;
+  /*---------- When a code tab is clicked... ----------*/
+  /*---------- When a code tab is hover... ----------*/
 }
 .code-nav .code-tab:after, .code-nav .code-tab:before {
   position: absolute;
@@ -847,15 +364,69 @@ a:hover {
   color: #f2f2f2;
 }
 
+/*---------- Grand-Parent container for all the code to be displayed ----------*/
 .code-wrapper {
-  height: auto;
-  max-height: 525px;
+  height: 525px;
   overflow: auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  /*---------- Parent container for code to be displayed ----------*/
 }
 .code-wrapper .code-container {
   font-size: 0.85rem;
 }
 .code-wrapper .code-container > div {
+  display: none;
+}
+
+/*---------- Gist Styles ----------*/
+body .gist .gist-file {
+  margin-bottom: 0;
+  border: none;
+  border-radius: 0;
+  font-family: "Anonymous Pro", courier, monospace, serif, monospace;
+}
+
+body .gist .gist-data {
+  border-bottom: none;
+  border-radius: 0;
+  background-color: #fff;
+}
+
+body .gist .blob-wrapper {
+  border-radius: 0;
+}
+
+body .gist .blob-code {
+  filter: hue-rotate(230deg) saturate(115%);
+}
+
+body .gist .highlight {
+  background-color: transparent;
+  font-family: "Anonymous Pro", courier, monospace, serif;
+  font-size: 14px;
+}
+
+body .gist .highlight td {
+  padding: 5px 15px !important;
+  line-height: 1;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+body .gist tr:first-child td {
+  padding-top: 0.5rem !important;
+}
+
+body .gist tr:last-child td {
+  padding-bottom: 1rem !important;
+}
+
+body .gist .blob-num {
+  pointer-events: none;
+}
+
+body .gist .gist-meta {
   display: none;
 }
 
@@ -971,132 +542,692 @@ footer .footer-links {
   transition: width 0.4s ease;
 }
 
+/*---------------------------------------*/
+/*---------- About Body Styles ----------*/
+/*---------------------------------------*/
+#about {
+  /*---------- Card that displays the image of MEEEE! ----------*/
+  /*---------- Paragraph #1 in the about me section ----------*/
+  /*---------- Paragraph #2 in the about me section ----------*/
+  /*---------- Table for my "mini" resume ----------*/
+}
+#about #about-intro {
+  background-color: #d9725b;
+  /*---------- h2='Hello There' // h3=up-arrows ----------*/
+  /*---------- Photo of meh ----------*/
+  /*---------- Overlay covers the card so you can not select anything in it ----------*/
+}
+#about #about-intro h2,
+#about #about-intro h3 {
+  font-family: "Anonymous Pro", courier, monospace, serif;
+  text-shadow: 0.125rem 0.125rem 0 #000;
+  transition: all 0.5s ease;
+}
+#about #about-intro h2 {
+  top: 1.5rem;
+  left: 10%;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+#about #about-intro h3 {
+  top: -0.5rem;
+  right: 15%;
+  font-size: 4rem;
+}
+#about #about-intro .thumbnail {
+  bottom: -6rem;
+  transition: all 0.5s ease;
+}
+#about #about-intro:hover h2 {
+  top: 1rem;
+}
+#about #about-intro:hover h3 {
+  top: 5rem;
+}
+#about #about-intro:hover .thumbnail {
+  bottom: -8rem;
+  z-index: 1;
+}
+#about #about-intro::after {
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  content: "";
+  box-shadow: 0 0 1rem #000;
+}
+#about #about-text-1 {
+  margin-left: 0.5rem;
+  padding-left: 0.5rem;
+  text-align: left;
+}
+#about #about-text-1:after {
+  position: absolute;
+  height: 98%;
+  width: 5px;
+  top: 0.2rem;
+  left: -0.75rem;
+  background-color: #6872a6;
+  box-shadow: 0.1rem 0.1rem 0 #000;
+  transition: box-shadow 0.5s ease;
+  content: "";
+}
+#about #about-text-1:hover:after {
+  box-shadow: 0.2rem 0.2rem 0 #000;
+}
+#about #about-text-2 {
+  margin-right: 0.5rem;
+  padding-right: 0.5rem;
+  text-align: right;
+}
+#about #about-text-2:after {
+  position: absolute;
+  height: 98%;
+  width: 5px;
+  top: 0.2rem;
+  right: -0.75rem;
+  background-color: #f2b872;
+  box-shadow: -0.1rem 0.1rem 0 #000;
+  transition: box-shadow 0.5s ease;
+  content: "";
+}
+#about #about-text-2:hover:after {
+  box-shadow: -0.2rem 0.2rem 0 #000;
+}
+#about .about-table {
+  position: relative;
+  padding-inline-start: 0;
+}
+#about .about-table .row {
+  position: relative;
+  margin: 3rem 0 0;
+  padding: 0;
+  justify-content: center;
+}
+#about .about-table .row div {
+  padding: 0;
+}
+#about .about-table .job,
+#about .about-table .school {
+  margin: 0;
+}
+#about .about-table .job span,
+#about .about-table .school span {
+  color: #999;
+}
+#about .about-table .field,
+#about .about-table .location {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #666;
+}
+#about .about-table .date,
+#about .about-table .gpa {
+  text-align: right;
+}
+
+/*----------------------------------------*/
+/*---------- Memory Game Styles ----------*/
+/*----------------------------------------*/
+#memory {
+  /*---------- Project AND Project Title Styles ----------*/
+  background-color: #404459;
+  background-image: radial-gradient(circle at 50%, #656B8C 0, #404459 100%);
+  /*---------- This is just a border that gives the "game board" a 3-d feel to it ----------*/
+  /*---------- Container where the game is generated ----------*/
+  /*---------- Every card is in a row of x-number of cards ----------*/
+  /*---------- Style for each individual card generated ----------*/
+  /*---------- BIG Title text in the game ----------*/
+  /*---------- When you complete the game, this overlay covers up the board ----------*/
+  /*---------- Header text in the "complete" screenb ----------*/
+  /*---------- How many atempts it took ----------*/
+  /*---------- Wiggle animation when you select two of the same card ----------*/
+}
+#memory .flex-column {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+#memory .flex-row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+#memory .unselectable {
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+/Edge */
+  user-select: none;
+  /* Standard */
+}
+#memory .board-border {
+  border: 8px solid #fff;
+  box-shadow: 0.5em 0.75em 0 #000, 20px 20px 30px rgba(0, 0, 0, 0.75);
+}
+#memory .board {
+  position: relative;
+  height: auto;
+  width: auto;
+  padding: 0.75em;
+  background-color: #f2bea0;
+  border-left: 5px solid #4d4d4d;
+  border-top: 5px solid #262626;
+}
+#memory .board-row {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+#memory .card-display {
+  position: relative;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-sizing: cover;
+  background-color: #fff;
+  text-align: center;
+  font-family: courier;
+  cursor: default;
+  transition: box-shadow 0.2s ease-in, top 0.2s linear, left 0.2s linear;
+}
+#memory h1#project-main-heading {
+  display: inline-block;
+  padding: 0;
+  color: #656B8C;
+  font-family: "Arvo", courier, monospace, serif;
+  transform: skew(-3deg) rotate(-3deg);
+  grid-area: text;
+  text-align: center;
+}
+#memory #board-overlay {
+  position: absolute;
+  display: flex;
+  flex-flow: column nowrap;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  justify-centent: flex-start;
+  align-items: center;
+}
+#memory #completed-heading {
+  font-family: "Arvo", courier, monospace, serif;
+  color: #656B8C;
+}
+#memory #message-count {
+  text-align: center;
+}
+#memory #message-count span {
+  color: #656B8C;
+}
+#memory #try-again-button {
+  position: relative;
+  background-color: #404459;
+  font-family: "Arvo", serif;
+  color: #fff;
+  border: 2px solid #fff;
+  box-shadow: 3px 3px 0 #000;
+  transition: all 0.2s ease-in;
+}
+#memory #try-again-button:hover {
+  box-shadow: 5px 5px 2px #000;
+}
+#memory #try-again-button:focus {
+  outline: none;
+}
+#memory .wiggle {
+  animation: wiggle-animation 0.75s ease 0.3s;
+}
+@keyframes wiggle-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(-7.25deg);
+  }
+  50% {
+    transform: rotate(7.25deg);
+  }
+  90% {
+    transform: rotate(-3.25deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/*---------------------------------------*/
+/*---------- Roast Calc Styles ----------*/
+/*---------------------------------------*/
+#roast {
+  /*---------- Project AND Project Title Styles ----------*/
+  height: 32rem;
+  overflow-y: scroll;
+  background-color: #2a828c;
+  background-image: radial-gradient(circle at 50%, #3f8e97 0, #2a828c 100%);
+  z-index: 1;
+  /*---------- Form styles cleared ----------*/
+  /*---------- This is the "FORM" element that all the inputs are inside----------*/
+  /*---------- Styles for the input field AND the grey placeholder text ----------*/
+  /*---------- This footer is under the project, but still inside the project container ----------*/
+  /*---------- When you click the "?" this overlay will pop up and fill the entire project container with a transparent black ----------*/
+  /*---------- This is inside the overlay and displays information about roasting terminology ----------*/
+  /*---------- "Exit" button inside the overlay ----------*/
+  /* ---------- Headings and Type ---------- */
+  /*---------- Animations ----------*/
+}
+#roast h1,
+#roast h2 {
+  font-family: "Cutive Mono", monospace, serif;
+  text-align: center;
+}
+#roast h1 {
+  text-shadow: 0.1rem 0.1rem 0 #fff;
+}
+#roast h2 {
+  color: #fff;
+  font-size: 1.8rem;
+  text-shadow: 2px 2px 0 #000;
+  cursor: default;
+}
+#roast .project-title h1 {
+  font-size: 2rem;
+}
+#roast .calc-form,
+#roast .input-area,
+#roast input,
+#roast label {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  border: none;
+}
+#roast .input-container {
+  width: 80%;
+  margin-left: 10%;
+  margin-bottom: 1rem;
+  text-align: center;
+  box-shadow: 2px 2px 5px #000;
+  /*---------- Each input is in one of these parent containers ----------*/
+  /*---------- First Crack column ----------*/
+  /*---------- Total Roast Time column ----------*/
+  /*---------- Developement Time Ratio column ----------*/
+}
+#roast .input-container .input-column {
+  height: 7rem;
+  padding: 1rem;
+  z-index: 2;
+  transition: all 0.3s ease-in-out;
+}
+#roast .input-container .input-column h2 {
+  font-size: 1.5rem;
+}
+#roast .input-container #fc-column {
+  background-color: #8c2703;
+}
+#roast .input-container #trt-column {
+  background-color: #f2784b;
+}
+#roast .input-container #dtr-column {
+  background-color: #d97971;
+}
+#roast .input-field,
+#roast .input-label {
+  position: absolute;
+  top: 3.25rem;
+  left: 25%;
+  height: 2.5rem;
+  width: 50%;
+  line-height: 2.5rem;
+  cursor: text;
+  font-family: monospace;
+  font-size: 1rem;
+  color: #000;
+  border: none;
+  transition: all 0.4s ease-in-out, padding 0.2s ease-in-out, font-weight 0s linear;
+}
+#roast .input-label {
+  background-color: #fff;
+  text-align: center;
+  color: #d3d3d3;
+  z-index: 1;
+}
+#roast #dtr-label:after {
+  position: absolute;
+  right: 0;
+  padding-right: 1rem;
+  content: "%";
+  transition: color 0.2s linear;
+}
+#roast .input-field {
+  background-color: transparent;
+  text-align: left;
+  padding-left: 3.5rem;
+  border-bottom: 3px solid black;
+  z-index: 2;
+}
+#roast .project-footer {
+  position: absolute;
+  bottom: -2rem;
+  right: 1rem;
+  padding-right: 1rem;
+  font-family: courier;
+}
+#roast .project-footer p {
+  display: inline;
+  padding: 0 0 0.1rem;
+  cursor: default;
+  transition: all 0.2s linear;
+}
+#roast .project-footer p #about {
+  left: 0;
+}
+#roast .project-footer p #author {
+  right: 0;
+}
+#roast #about-overlay {
+  position: absolute;
+  display: flex;
+  flex-flow: row nowrap;
+  height: auto;
+  min-height: 100% !important;
+  width: 100%;
+  top: 0;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+#roast #about-window {
+  position: relative;
+  display: inline-block;
+  height: auto;
+  width: 60rem;
+  max-width: 85%;
+  margin: 1rem 0 4rem;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 4px 4px 2px #000;
+  z-index: 3;
+}
+#roast .about-content {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  height: auto;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+#roast #graph-about {
+  height: auto;
+  width: 100%;
+}
+#roast #graph-about img {
+  height: auto;
+  width: 100%;
+}
+#roast .about-text {
+  height: auto;
+  width: 100%;
+}
+#roast #x-about {
+  position: absolute;
+  width: auto;
+  top: 5px;
+  right: 8px;
+  padding: 0;
+  font-size: 0.75rem;
+  cursor: default;
+  z-index: 1;
+  transition: all 0.4s ease-out;
+}
+#roast .about-content {
+  /*---------- Main Heading and definition headings ----------*/
+  /*---------- "[scroll down]" text ----------*/
+}
+#roast .about-content h1,
+#roast .about-content h2 {
+  height: auto;
+  width: 100%;
+  padding-bottom: 1rem;
+  font-size: 1.25rem;
+  color: #000;
+  text-shadow: 1px 1px 0 #000;
+}
+#roast .about-content h5 {
+  margin-top: -1.25rem;
+  font-size: 0.75rem;
+}
+#roast .about-content p {
+  margin-top: 0rem;
+  padding: 0;
+}
+#roast p {
+  padding-bottom: 1rem;
+  font-family: courier;
+  font-size: 0.75rem;
+  line-height: 1.2rem;
+}
+#roast span.error-title,
+#roast span.term-title {
+  padding-right: 0.75rem;
+  font-weight: 600;
+}
+#roast span.error-title {
+  color: red;
+}
+#roast span.equation {
+  padding-top: 0.1rem;
+  font-style: italic;
+}
+#roast #fc-column.bg-hover {
+  background-color: rgba(140, 39, 3, 0.9);
+}
+#roast #trt-column.bg-hover {
+  background-color: rgba(242, 120, 75, 0.875);
+}
+#roast #dtr-column.bg-hover {
+  background-color: rgba(217, 121, 113, 0.9);
+}
+#roast .input-column.input-hover .input-field {
+  box-shadow: 3px 3px 0 #000;
+}
+#roast .input-column.perc #dtr-label::after {
+  color: #000;
+}
+#roast .input-column.focus .input-field {
+  outline: none;
+  box-shadow: 3px 5px 0 #000;
+}
+#roast .input-column.complete .input-field {
+  font-weight: 600;
+}
+#roast .input-column.calculate .input-field {
+  color: red;
+}
+#roast #about.hover,
+#roast #x-about.hover {
+  text-shadow: 1px 1px 0 black;
+  border-bottom: 0.25px solid black;
+}
+
+/*---------------------------------------*/
+/*---------- Input Form Styles ----------*/
+/*---------------------------------------*/
+#form {
+  /*---------- Project AND Project Title Styles ----------*/
+  background-color: #717171;
+  background-image: radial-gradient(circle at 50%, #808080 0, #717171 100%);
+  /*---------- Project Styles ----------*/
+  /*---------- Field Container holds every form element individually ----------*/
+  /* ---------- Animations ----------*/
+  /* Label styles when parent container is hover */
+  /* Submit button styles on hover */
+  /* Label styles when parent container has been selected */
+  /* Message label styles when parent container has been selected */
+  /* Input and text area field styles when selected */
+  /* Run a JavaScript function when autofill occurs */
+  /* ---------- Validation ---------- */
+  /* Style of the container that displays validation or error messages */
+  /* If error: style for  message displayed */
+  /*If valid: styles for check mark displayed */
+}
+#form h1 {
+  text-align: center;
+  font-family: courier;
+  font-size: 1.5rem;
+  color: #edca3b;
+  text-shadow: 0.2rem 0.2rem 0 #000;
+}
+#form .project {
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 0.5rem 0.5rem 0 #000;
+}
+#form .project h2,
+#form .project h3 {
+  font-family: "Raleway", sans-serif;
+}
+#form .project h2 {
+  font-size: 1.25rem;
+}
+#form .project h3 {
+  font-size: 1rem;
+}
+#form #fsubmit,
+#form .contact-form,
+#form fieldset,
+#form input,
+#form label,
+#form textarea {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  border: none;
+}
+#form #ftitle {
+  margin-bottom: 1rem;
+}
+#form .field-container {
+  display: block;
+  position: relative;
+  margin: auto;
+  outline: none;
+  width: 90%;
+  /* Input field label styles when at rest */
+  /* Input and text area field styles at rest */
+  /* Input fields only have a bottom border */
+  /* Message text area styles */
+  /* Submit button styles at rest */
+}
+#form .field-container label {
+  position: absolute;
+  display: inline-block;
+  width: auto;
+  top: 0.2rem;
+  left: 0.3rem;
+  padding-right: 3rem;
+  cursor: text;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 0.8rem;
+  color: #616161;
+  letter-spacing: 0.03rem;
+  opacity: 1;
+  border-bottom: none;
+  transition: all 0.5s linear;
+}
+#form .field-container input,
+#form .field-container textarea {
+  margin-bottom: 2.5rem;
+  padding: 5px;
+  width: 100%;
+  line-height: 1.25rem;
+  font-size: 1rem;
+  font-family: courier;
+}
+#form .field-container input {
+  border: none;
+  border-bottom: 1px solid black;
+}
+#form .field-container #fmessage {
+  height: 6.5rem;
+  padding-top: 2.2rem;
+  border: 1px solid black;
+  resize: none;
+}
+#form .field-container #fsubmit {
+  position: relative;
+  width: 100%;
+  height: 3rem;
+  background: #edca3b;
+  border-bottom: 1px solid black;
+  transition: all 0.2s ease-in-out;
+}
+#form .field-container.hover label {
+  letter-spacing: 0.04rem;
+  color: #000000;
+}
+#form .field-container.hover #fsubmit {
+  background: #edd264;
+  letter-spacing: 0.01rem;
+}
+#form .field-container.focus label {
+  top: -1.2rem;
+  border-bottom: 3px solid #edca3b;
+  color: #000000;
+  transition: all 0.2s ease-in-out;
+}
+#form .field-container.focus label.message-top {
+  top: 0.2rem;
+}
+#form input:focus,
+#form textarea:focus {
+  outline: none;
+}
+#form input:-webkit-autofill {
+  animation-name: onAutoFillStart;
+}
+#form input:not(:-webkit-autofill) {
+  animation-name: onAutoFillCancel;
+}
+#form .status-container {
+  width: auto;
+  position: absolute;
+  display: hidden;
+  margin: 0;
+  padding: 0;
+  cursor: default;
+  white-space: nowrap;
+  overflow: hidden;
+  opacity: 1;
+  font-size: 0.7rem;
+}
+#form .status-container.error {
+  bottom: 1.25rem;
+  right: -0.35rem;
+  color: red;
+}
+#form .status-container.valid {
+  bottom: 2.75rem;
+  right: -1rem;
+  color: green;
+}
+
 /*---------------------------------------------*/
 /*---------- Screen Break Formatting ----------*/
 /*---------------------------------------------*/
-@media only screen and (min-width: 992px) {
-  #memory .card-display {
-    height: 75px;
-    width: 75px;
-    margin: 7.7px;
-    font-size: 42px;
-    border: 3.85px solid #fff;
-    border-radius: 12.8333333333px;
-    background-size: 5rem 5rem;
-    box-shadow: 3.85px 3.85px 0 #000;
-  }
-  #memory .card-display.hover {
-    top: -1.54px;
-    left: -1.54px;
-    box-shadow: 5.1333333333px 5.1333333333px 3.85px #000;
-  }
-  #memory .card-flipped {
-    border: 3.85px solid #000;
-    box-shadow: 3.85px 3.85px 2.5666666667px #8448D9, -3.85px -3.85px 2.5666666667px #D53A33;
-  }
-  #memory h1#project-main-heading {
-    font-size: 38.5px;
-    text-shadow: 1.925px 1.925px 0 #F2BEA0, -1.925px -1.925px 0 #D53A33, 20px 20px 30px rgba(0, 0, 0, 0.9);
-  }
-  #memory h1#project-main-heading span {
-    font-size: 30.8px;
-  }
-  #memory #completed-heading {
-    margin: 19.25px;
-    font-size: 25.6666666667px;
-    text-shadow: 1.925px 1.925px 0 #fff, -1.925px -1.925px 0 #F23005, 5px 10px 10px rgba(0, 0, 0, 0.9);
-  }
-  #memory #message-count {
-    margin-top: 19.25px;
-    font-size: 15.4px;
-  }
-  #memory #message-count span {
-    font-size: 25.6666666667px;
-    text-shadow: 1.925px 1.925px 0 #fff, -1.925px -1.925px 0 #F23005, 5px 10px 10px rgba(0, 0, 0, 0.9);
-  }
-  #memory #try-again-button {
-    margin-top: 19.25px;
-    padding: 7.7px;
-    font-size: 12.8333333333px;
-  }
-  #memory #try-again-button:hover {
-    text-shadow: 1.54px 1.54px #000, 10px 10px 10px rgba(0, 0, 0, 0.9);
-  }
-}
-@media only screen and (max-width: 1199px) {
-  #roast .input-field {
-    padding-left: 2.6rem;
-  }
-}
-@media only screen and (max-width: 991px) {
-  #memory .card-display {
-    height: 7vw;
-    width: 7vw;
-    margin: 0.9vw;
-    font-size: 4vw;
-    border: 0.45vw solid #fff;
-    border-radius: 1.5vw;
-    background-size: 11vw 11vw;
-    box-shadow: 0.45vw 0.45vw 0 #000;
-  }
-  #memory .card-display.hover {
-    top: -0.18vw;
-    left: -0.18vw;
-    box-shadow: 0.6vw 0.6vw 0.45vw #000;
-  }
-  #memory .card-flipped {
-    border: 0.45vw solid #000;
-    box-shadow: 0.45vw 0.45vw 0.3vw #8448D9, -0.45vw -0.45vw 0.3vw #D53A33;
-  }
-  #memory h1#project-main-heading {
-    font-size: 4.5vw;
-    text-shadow: 0.225vw 0.225vw 0 #F2BEA0, -0.225vw -0.225vw 0 #D53A33, 20px 20px 30px rgba(0, 0, 0, 0.9);
-  }
-  #memory h1#project-main-heading span {
-    font-size: 3.6vw;
-  }
-  #memory #completed-heading {
-    margin: 2.25vw;
-    font-size: 3vw;
-    text-shadow: 0.225vw 0.225vw 0 #fff, -0.225vw -0.225vw 0 #F23005, 5px 10px 10px rgba(0, 0, 0, 0.9);
-  }
-  #memory #message-count {
-    margin-top: 2.25vw;
-    font-size: 1.8vw;
-  }
-  #memory #message-count span {
-    font-size: 3vw;
-    text-shadow: 0.225vw 0.225vw 0 #fff, -0.225vw -0.225vw 0 #F23005, 5px 10px 10px rgba(0, 0, 0, 0.9);
-  }
-  #memory #try-again-button {
-    margin-top: 2.25vw;
-    padding: 0.9vw;
-    font-size: 1.5vw;
-  }
-  #memory #try-again-button:hover {
-    text-shadow: 0.18vw 0.18vw #000, 10px 10px 10px rgba(0, 0, 0, 0.9);
-  }
-
-  #roast {
-    height: 20rem;
-  }
-  #roast .input-container {
-    width: 95%;
-    margin-left: 2.5%;
-  }
-  #roast .input-container .input-column {
-    height: 12rem;
-  }
-  #roast .input-field,
-#roast .input-label {
-    top: 7rem;
-    left: 12.5%;
-    width: 75%;
-  }
-  #roast .input-field {
-    padding-left: 2.2rem;
-  }
-}
 @media only screen and (max-width: 767px) {
   body,
 html {
@@ -1118,60 +1249,243 @@ html {
   .about-table .location {
     font-size: 0.9rem;
   }
-
-  .card-display {
+}
+@media only screen and (max-width: 575px) {
+  body,
+html {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 357px) {
+  body,
+html {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #memory .card-display {
+    height: 75px;
+    width: 75px;
+    margin: 7.7px;
+    font-size: 42px;
+    border: 3.85px solid #fff;
+    border-radius: 19.25px;
+    background-size: 5rem 5rem;
+    box-shadow: 3.85px 3.85px 0 #000;
+  }
+  #memory .card-display.hover {
+    top: -1.54px;
+    left: -1.54px;
+    box-shadow: 5.1333333333px 5.1333333333px 3.85px #000;
+  }
+  #memory .card-flipped {
+    border: 3.85px solid #000;
+    box-shadow: 3.85px 3.85px 2.5666666667px #8448D9, -3.85px -3.85px 2.5666666667px #D53A33;
+  }
+  #memory h1#project-main-heading {
+    font-size: 38.5px;
+    text-shadow: 1.925px 1.925px 0 #F2BEA0, -1.925px -1.925px 0 #D53A33, 20px 20px 30px rgba(0, 0, 0, 0.9);
+  }
+  #memory h1#project-main-heading span {
+    font-size: 30.8px;
+  }
+  #memory #completed-heading {
+    margin: 38.5px;
+    font-size: 38.5px;
+    text-shadow: 1.925px 1.925px 0 #fff, -1.925px -1.925px 0 #F23005, 5px 10px 10px rgba(0, 0, 0, 0.9);
+  }
+  #memory #message-count {
+    margin-top: 19.25px;
+    font-size: 22px;
+  }
+  #memory #message-count span {
+    font-size: 38.5px;
+    text-shadow: 1.925px 1.925px 0 #fff, -1.925px -1.925px 0 #F23005, 5px 10px 10px rgba(0, 0, 0, 0.9);
+  }
+  #memory #try-again-button {
+    margin-top: 19.25px;
+    padding: 7.7px;
+    font-size: 12.8333333333px;
+  }
+  #memory #try-again-button:hover {
+    text-shadow: 1.54px 1.54px #000, 10px 10px 10px rgba(0, 0, 0, 0.9);
+  }
+}
+@media only screen and (max-width: 991px) {
+  #memory .card-display {
+    height: 7vw;
+    width: 7vw;
+    margin: 0.9vw;
+    font-size: 4vw;
+    border: 0.45vw solid #fff;
+    border-radius: 1.8vw;
+    background-size: 11vw 11vw;
+    box-shadow: 0.45vw 0.45vw 0 #000;
+  }
+  #memory .card-display.hover {
+    top: -0.18vw;
+    left: -0.18vw;
+    box-shadow: 0.6vw 0.6vw 0.45vw #000;
+  }
+  #memory .card-flipped {
+    border: 0.45vw solid #000;
+    box-shadow: 0.45vw 0.45vw 0.3vw #8448D9, -0.45vw -0.45vw 0.3vw #D53A33;
+  }
+  #memory h1#project-main-heading {
+    font-size: 4.5vw;
+    text-shadow: 0.225vw 0.225vw 0 #F2BEA0, -0.225vw -0.225vw 0 #D53A33, 20px 20px 30px rgba(0, 0, 0, 0.9);
+  }
+  #memory h1#project-main-heading span {
+    font-size: 3.6vw;
+  }
+  #memory #completed-heading {
+    margin: 3vw;
+    font-size: 4.5vw;
+    text-shadow: 0.225vw 0.225vw 0 #fff, -0.225vw -0.225vw 0 #F23005, 5px 10px 10px rgba(0, 0, 0, 0.9);
+  }
+  #memory #message-count {
+    margin-top: 2.25vw;
+    font-size: 2.5714285714vw;
+  }
+  #memory #message-count span {
+    font-size: 4.5vw;
+    text-shadow: 0.225vw 0.225vw 0 #fff, -0.225vw -0.225vw 0 #F23005, 5px 10px 10px rgba(0, 0, 0, 0.9);
+  }
+  #memory #try-again-button {
+    margin-top: 2.25vw;
+    padding: 0.9vw;
+    font-size: 1.5vw;
+  }
+  #memory #try-again-button:hover {
+    text-shadow: 0.18vw 0.18vw #000, 10px 10px 10px rgba(0, 0, 0, 0.9);
+  }
+}
+@media only screen and (max-width: 767px) {
+  #memory .card-display {
     height: 10vw;
     width: 10vw;
     margin: 1.2vw;
     font-size: 7vw;
     border: 0.6vw solid #fff;
-    border-radius: 2vw;
+    border-radius: 2.4vw;
     background-size: 14vw 14vw;
     box-shadow: 0.6vw 0.6vw 0 #000;
   }
-  .card-display.hover {
+  #memory .card-display.hover {
     top: -0.24vw;
     left: -0.24vw;
     box-shadow: 0.8vw 0.8vw 0.6vw #000;
   }
-
-  .card-flipped {
+  #memory .card-flipped {
     border: 0.6vw solid #000;
     box-shadow: 0.6vw 0.6vw 0.4vw #8448D9, -0.6vw -0.6vw 0.4vw #D53A33;
   }
-
-  h1#project-main-heading {
+  #memory h1#project-main-heading {
     font-size: 6vw;
     text-shadow: 0.3vw 0.3vw 0 #F2BEA0, -0.3vw -0.3vw 0 #D53A33, 20px 20px 30px rgba(0, 0, 0, 0.9);
   }
-  h1#project-main-heading span {
+  #memory h1#project-main-heading span {
     font-size: 4.8vw;
   }
-
-  #completed-heading {
-    margin: 3vw;
-    font-size: 4vw;
+  #memory #completed-heading {
+    margin: 4vw;
+    font-size: 6vw;
     text-shadow: 0.3vw 0.3vw 0 #fff, -0.3vw -0.3vw 0 #F23005, 5px 10px 10px rgba(0, 0, 0, 0.9);
   }
-
-  #message-count {
+  #memory #message-count {
     margin-top: 3vw;
-    font-size: 2.4vw;
+    font-size: 3.4285714286vw;
   }
-  #message-count span {
-    font-size: 4vw;
+  #memory #message-count span {
+    font-size: 6vw;
     text-shadow: 0.3vw 0.3vw 0 #fff, -0.3vw -0.3vw 0 #F23005, 5px 10px 10px rgba(0, 0, 0, 0.9);
   }
-
-  #try-again-button {
+  #memory #try-again-button {
     margin-top: 3vw;
     padding: 1.2vw;
     font-size: 2vw;
   }
-  #try-again-button:hover {
+  #memory #try-again-button:hover {
     text-shadow: 0.24vw 0.24vw #000, 10px 10px 10px rgba(0, 0, 0, 0.9);
   }
+}
+@media only screen and (max-width: 575px) {
+  #memory .card-display {
+    height: 12vw;
+    width: 12vw;
+    margin: 1.4vw;
+    font-size: 9vw;
+    border: 0.7vw solid #fff;
+    border-radius: 2.8vw;
+    background-size: 16vw 16vw;
+    box-shadow: 0.7vw 0.7vw 0 #000;
+  }
+  #memory .card-display.hover {
+    top: -0.28vw;
+    left: -0.28vw;
+    box-shadow: 0.9333333333vw 0.9333333333vw 0.7vw #000;
+  }
+  #memory .card-flipped {
+    border: 0.7vw solid #000;
+    box-shadow: 0.7vw 0.7vw 0.4666666667vw #8448D9, -0.7vw -0.7vw 0.4666666667vw #D53A33;
+  }
+  #memory h1#project-main-heading {
+    font-size: 7vw;
+    text-shadow: 0.35vw 0.35vw 0 #F2BEA0, -0.35vw -0.35vw 0 #D53A33, 20px 20px 30px rgba(0, 0, 0, 0.9);
+  }
+  #memory h1#project-main-heading span {
+    font-size: 5.6vw;
+  }
+  #memory #completed-heading {
+    margin: 4.6666666667vw;
+    font-size: 7vw;
+    text-shadow: 0.35vw 0.35vw 0 #fff, -0.35vw -0.35vw 0 #F23005, 5px 10px 10px rgba(0, 0, 0, 0.9);
+  }
+  #memory #message-count {
+    margin-top: 3.5vw;
+    font-size: 4vw;
+  }
+  #memory #message-count span {
+    font-size: 7vw;
+    text-shadow: 0.35vw 0.35vw 0 #fff, -0.35vw -0.35vw 0 #F23005, 5px 10px 10px rgba(0, 0, 0, 0.9);
+  }
+  #memory #try-again-button {
+    margin-top: 3.5vw;
+    padding: 1.4vw;
+    font-size: 2.3333333333vw;
+  }
+  #memory #try-again-button:hover {
+    text-shadow: 0.28vw 0.28vw #000, 10px 10px 10px rgba(0, 0, 0, 0.9);
+  }
+}
 
+@media only screen and (max-width: 1199px) {
+  #roast #roast .input-field {
+    padding-left: 2.6rem;
+  }
+}
+@media only screen and (max-width: 991px) {
+  #roast {
+    height: 20rem;
+  }
+  #roast .input-container {
+    width: 95%;
+    margin-left: 2.5%;
+  }
+  #roast .input-container .input-column {
+    height: 12rem;
+  }
+  #roast .input-field,
+#roast .input-label {
+    top: 7rem;
+    left: 12.5%;
+    width: 75%;
+  }
+  #roast .input-field {
+    padding-left: 2.2rem;
+  }
+}
+@media only screen and (max-width: 767px) {
   #roast {
     height: 22.5rem;
   }
@@ -1187,64 +1501,6 @@ html {
   }
 }
 @media only screen and (max-width: 575px) {
-  body,
-html {
-    font-size: 16px;
-  }
-
-  .card-display {
-    height: 12vw;
-    width: 12vw;
-    margin: 1.4vw;
-    font-size: 9vw;
-    border: 0.7vw solid #fff;
-    border-radius: 2.3333333333vw;
-    background-size: 16vw 16vw;
-    box-shadow: 0.7vw 0.7vw 0 #000;
-  }
-  .card-display.hover {
-    top: -0.28vw;
-    left: -0.28vw;
-    box-shadow: 0.9333333333vw 0.9333333333vw 0.7vw #000;
-  }
-
-  .card-flipped {
-    border: 0.7vw solid #000;
-    box-shadow: 0.7vw 0.7vw 0.4666666667vw #8448D9, -0.7vw -0.7vw 0.4666666667vw #D53A33;
-  }
-
-  h1#project-main-heading {
-    font-size: 7vw;
-    text-shadow: 0.35vw 0.35vw 0 #F2BEA0, -0.35vw -0.35vw 0 #D53A33, 20px 20px 30px rgba(0, 0, 0, 0.9);
-  }
-  h1#project-main-heading span {
-    font-size: 5.6vw;
-  }
-
-  #completed-heading {
-    margin: 3.5vw;
-    font-size: 4.6666666667vw;
-    text-shadow: 0.35vw 0.35vw 0 #fff, -0.35vw -0.35vw 0 #F23005, 5px 10px 10px rgba(0, 0, 0, 0.9);
-  }
-
-  #message-count {
-    margin-top: 3.5vw;
-    font-size: 2.8vw;
-  }
-  #message-count span {
-    font-size: 4.6666666667vw;
-    text-shadow: 0.35vw 0.35vw 0 #fff, -0.35vw -0.35vw 0 #F23005, 5px 10px 10px rgba(0, 0, 0, 0.9);
-  }
-
-  #try-again-button {
-    margin-top: 3.5vw;
-    padding: 1.4vw;
-    font-size: 2.3333333333vw;
-  }
-  #try-again-button:hover {
-    text-shadow: 0.28vw 0.28vw #000, 10px 10px 10px rgba(0, 0, 0, 0.9);
-  }
-
   #roast {
     height: 34rem;
   }
@@ -1288,11 +1544,6 @@ html {
   }
 }
 @media only screen and (max-width: 357px) {
-  body,
-html {
-    font-size: 14px;
-  }
-
   #roast {
     height: 36rem;
   }

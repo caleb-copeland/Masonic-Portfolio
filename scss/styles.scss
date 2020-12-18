@@ -1,10 +1,14 @@
 @use 'base'; // Global Styles
 @use 'fonts'; // Google Fonts and Font-Variables
 @use 'colors'; // Color Variables
-@use 'memory-game'; // Memory-Game Specific CSS
-@use 'roast-calc'; // Roast-Calc Specific CSS
+@import 'about';
+@import 'memory-game'; // Memory-Game Specific CSS Mixin
+@import 'roast-calc'; // Roast-Calc Specific CSS Mixin
+@import 'input-form'; // Input form Specific CSS Mixin
 @import 'mixins'; // Portfolio Card Mixin
-@import 'screen-breaks'; // Screen Break Formatting Mixin
+@import 'global-screen-breaks'; // Site Wide Screen Break Mixin
+@import 'memory-screen-breaks'; // Memory Game Screen Break Mixin
+@import 'roast-screen-breaks'; // Roast Calc Screen Break Mixin
 /*---------------------------------------*/
 /*---------- Navigation Styles ----------*/
 /*---------------------------------------*/
@@ -30,24 +34,24 @@
 #projects-nav {
   margin-right: 1.5rem;
   color: colors.$teal;
-  @include link-underline (colors.$teal);
+  @include link-underline (colors.$teal); // Mixin to add the animated underline effect
 
   &.active {
-    @include active-link-underline (colors.$teal);
+    @include active-link-underline (colors.$teal); // Mixin to add an underline for the active code tab
   }
 }
 
 #about-nav {
   color: colors.$orange;
-  @include link-underline (colors.$orange);
+  @include link-underline (colors.$orange); // Mixin to add the animated underline effect
 
   &.active {
-    @include active-link-underline (colors.$orange);
+    @include active-link-underline (colors.$orange); // Mixin to add an underline for the active code tab
   }
 }
 
 .navbar-toggler {
-  border: none;
+  border: none; // ¡Get rid of that dang border!
 }
 /*------------------------------------------*/
 /*---------- Projects Body Styles ----------*/
@@ -120,145 +124,92 @@
     @include link-underline (colors.$dark-blue);
   }
 }
-/*---------------------------------------*/
-/*---------- About Body Styles ----------*/
-/*---------------------------------------*/
-#about-intro {
-  background-color: colors.$orange;
-
-  h2,
-  h3 {
-    font-family: fonts.$anonymous;
-    text-shadow: 0.125rem 0.125rem 0 #000;
-    transition: all 0.5s ease;
-  }
-
-  h2 {
-    top: 1.5rem;
-    left: 10%;
-    font-size: 1.5rem;
-    font-weight: 700;
-  }
-
-  h3 {
-    top: -0.5rem;
-    right: 15%;
-    font-size: 4rem;
-  }
-
-  .thumbnail {
-    bottom: -6rem;
-    transition: all 0.5s ease;
-  }
-
-  &:hover {
-    h2 {
-      top: 1rem;
-    }
-
-    h3 {
-      top: 5rem;
-    }
-
-    .thumbnail {
-      bottom: -8rem;
-      z-index: 1;
-    }
-  }
-  // Overlay
-  &::after {
-    display: block;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    content: '';
-    box-shadow: 0 0 1rem #000;
-  }
-}
-
-#about-text-1 {
-  @include paragraph-accent-line(colors.$dark-blue, "left", 0.1, 0.1);
-}
-
-#about-text-2 {
-  @include paragraph-accent-line(colors.$yellow, "right", -0.1 , 0.1);
-}
-
-.about-table {
-  position: relative;
-  padding-inline-start: 0;
-
-  .row {
-    position: relative;
-    margin: 3rem 0 0;
-    padding: 0;
-    justify-content: center;
-
-    div {
-      padding: 0;
-    }
-  }
-
-  .job,
-  .school {
-    margin: 0;
-
-    span {
-      color: #999;
-    }
-  }
-
-  .field,
-  .location {
-    font-family: fonts.$raleway;
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: #666;
-  }
-
-  .date,
-  .gpa {
-    text-align: right;
-  }
-}
-// * { border: 1px solid red;}
 /*------------------------------------------------*/
 /*---------- Project Page - Memory Game ----------*/
 /*------------------------------------------------*/
 .code-nav {
-  background-color: #444;
-
+  background-color: #444; // BG color for the nav in a Projects page that controls which code is displayed
+  /*---------- Each individual link in the code nav is a "code-tab" ----------*/
   .code-tab {
     margin: 0 1rem 0 0;
     font-size: 1rem;
     color: colors.$white-ish;
     text-shadow: 0.1rem 0.1rem 0 #000;
-    @include link-underline (colors.$white-ish);
-
+    @include link-underline (colors.$white-ish); // Mixin to add the animated underline when hover...
+    /*---------- When a code tab is clicked... ----------*/
     &.active {
-      @include active-link-underline (colors.$white-ish);
+      @include active-link-underline (colors.$white-ish); // Mixin to add an underline for the active code tab
     }
-
+    /*---------- When a code tab is hover... ----------*/
     &:hover {
       color: colors.$white-ish;
     }
   }
 }
-
+/*---------- Grand-Parent container for all the code to be displayed ----------*/
 .code-wrapper {
-  height: auto;
-  max-height: 525px;
+  height: 525px;
   overflow: auto;
-
+  background-color: #fff;
+  border: 1px solid #ccc;
+  /*---------- Parent container for code to be displayed ----------*/
   .code-container {
     font-size: 0.85rem;
 
     & > div {
-      display: none;
+      display: none; // The initial state of any code snippet is to NOT be displayed
     }
   }
+}
+/*---------- Gist Styles ----------*/
+body .gist .gist-file {
+  margin-bottom: 0;
+  border: none;
+  border-radius: 0;
+  font-family: fonts.$anonymous, monospace;
+}
+
+body .gist .gist-data {
+  border-bottom: none;
+  border-radius: 0;
+  background-color: #fff;
+}
+
+body .gist .blob-wrapper {
+  border-radius: 0;
+}
+
+body .gist .blob-code {
+  filter: hue-rotate(230deg) saturate(115%);
+}
+
+body .gist .highlight {
+  background-color: transparent;
+  font-family: fonts.$anonymous;
+  font-size: 14px;
+}
+
+body .gist .highlight td {
+  padding: 5px 15px !important;
+  line-height: 1;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+body .gist tr:first-child td {
+  padding-top: 0.5rem !important;
+}
+
+body .gist tr:last-child td {
+  padding-bottom: 1rem !important;
+}
+
+body .gist .blob-num {
+  pointer-events: none;
+}
+
+body .gist .gist-meta {
+  display: none;
 }
 // TO SEE CSS FOR THE SPECIFIC PROJECTS SEE '_memory-game.scss', '_roast-calc.scss' AND '_input-form.scss'!!!
 /*-----------------------------------*/
@@ -284,19 +235,28 @@ footer {
 
 #f-email {
   color: colors.$dark-blue;
-  @include link-underline (colors.$dark-blue);
+  @include link-underline (colors.$dark-blue); // Mixin to add the animated underline effect
 }
 
 #f-github {
   color: colors.$teal;
-  @include link-underline (colors.$teal);
+  @include link-underline (colors.$teal); // Mixin to add the animated underline effect
 }
 
 #f-codepen {
   color: colors.$orange;
-  @include link-underline (colors.$orange);
+  @include link-underline (colors.$orange); // Mixin to add the animated underline effect
 }
+//------------------------------------------//
+//---------- Page Specific Styles ----------//
+//------------------------------------------//
+@include about;
+@include memory-game;
+@include roast-calc;
+@include input-form;
 /*---------------------------------------------*/
 /*---------- Screen Break Formatting ----------*/
 /*---------------------------------------------*/
-@include screen-breaks;
+@include global-screen-breaks;
+@include memory-screen-breaks;
+@include roast-screen-breaks;

@@ -1,0 +1,173 @@
+@mixin input-form {
+  /*---------------------------------------*/
+  /*---------- Input Form Styles ----------*/
+  /*---------------------------------------*/
+  #form {
+    /*---------- Project AND Project Title Styles ----------*/
+    background-color: #717171;
+    background-image: radial-gradient(circle at 50%, #808080 0, #717171 100%);
+
+    h1 {
+      text-align: center;
+      font-family: courier;
+      font-size: 1.5rem;
+      color: #edca3b;
+      text-shadow: 0.2rem 0.2rem 0 #000;
+    }
+
+    /*---------- Project Styles ----------*/
+    .project {
+      background-color: #fff;
+      text-align: center;
+      box-shadow: 0.5rem 0.5rem 0 #000;
+
+      h2,
+      h3 {
+        font-family: fonts.$raleway;
+      }
+
+      h2 {
+        font-size: 1.25rem;
+      }
+
+      h3 {
+        font-size: 1rem;
+      }
+    }
+    // Form styles cleared //
+    #fsubmit,
+    .contact-form,
+    fieldset,
+    input,
+    label,
+    textarea {
+      -webkit-appearance: none;
+      appearance: none;
+      border-radius: 0;
+      border: none;
+    }
+
+    #ftitle {
+      margin-bottom: 1rem;
+    }
+
+    /*---------- Field Container holds every form element individually ----------*/
+    .field-container {
+      display: block;
+      position: relative;
+      margin: auto;
+      outline: none;
+      width: 90%;
+      /* Input field label styles when at rest */
+      label {
+        position: absolute;
+        display: inline-block;
+        width: auto;
+        top: 0.2rem;
+        left: 0.3rem;
+        padding-right: 3rem;
+        cursor: text;
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 0.8rem;
+        color: #616161;
+        letter-spacing: 0.03rem;
+        opacity: 1;
+        border-bottom: none;
+        transition: all 0.5s linear;
+      }
+      /* Input and text area field styles at rest */
+      input,
+      textarea {
+        margin-bottom: 2.5rem;
+        padding: 5px;
+        width: 100%;
+        line-height: 1.25rem;
+        font-size: 1rem;
+        font-family: courier;
+      }
+      /* Input fields only have a bottom border */
+      input {
+        border: none;
+        border-bottom: 1px solid black;
+      }
+      /* Message text area styles */
+      #fmessage {
+        height: 6.5rem;
+        padding-top: 2.2rem;
+        border: 1px solid black;
+        resize: none;
+      }
+      /* Submit button styles at rest */
+      #fsubmit {
+        position: relative;
+        width: 100%;
+        height: 3rem;
+        background: #edca3b;
+        border-bottom: 1px solid black;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+    /* ---------- Animations ----------*/
+    /* Label styles when parent container is hover */
+    .field-container.hover label {
+      letter-spacing: 0.04rem;
+      color: #000000;
+    }
+    /* Submit button styles on hover */
+    .field-container.hover #fsubmit {
+      background: #edd264;
+      letter-spacing: 0.01rem;
+    }
+    /* Label styles when parent container has been selected */
+    .field-container.focus label {
+      top: -1.2rem;
+      border-bottom: 3px solid #edca3b;
+      color: #000000;
+      transition: all 0.2s ease-in-out;
+    }
+    /* Message label styles when parent container has been selected */
+    .field-container.focus label.message-top {
+      top: 0.2rem;
+    }
+    /* Input and text area field styles when selected */
+    input:focus,
+    textarea:focus {
+      outline: none;
+    }
+    /* Run a JavaScript function when autofill occurs */
+    input:-webkit-autofill {
+      animation-name: onAutoFillStart;
+    }
+
+    input:not(:-webkit-autofill) {
+      animation-name: onAutoFillCancel;
+    }
+    /* ---------- Validation ---------- */
+    /* Style of the container that displays validation or error messages */
+    .status-container {
+      width: auto;
+      position: absolute;
+      display: hidden;
+      margin: 0;
+      padding: 0;
+      cursor: default;
+      white-space: nowrap;
+      overflow: hidden;
+      opacity: 1;
+      font-size: 0.7rem;
+    }
+    /* If error: style for  message displayed */
+    .status-container.error {
+      bottom: 1.25rem;
+      right: -0.35rem;
+      color: red;
+    }
+    /*If valid: styles for check mark displayed */
+    .status-container.valid {
+      bottom: 2.75rem;
+      right: -1rem;
+      color: green;
+    }
+  }
+}

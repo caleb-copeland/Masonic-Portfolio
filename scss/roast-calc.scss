@@ -1,0 +1,298 @@
+@mixin roast-calc {
+  /*---------------------------------------*/
+  /*---------- Roast Calc Styles ----------*/
+  /*---------------------------------------*/
+  #roast {
+    /*---------- Project AND Project Title Styles ----------*/
+    height: 32rem;
+    overflow-y: scroll;
+    background-color: #2a828c;
+    background-image: radial-gradient(circle at 50%, #3f8e97 0, #2a828c 100%);
+    z-index: 1;
+
+    h1,
+    h2 {
+      font-family: fonts.$cutive-mono;
+      text-align: center;
+    }
+
+    h1 {
+      text-shadow: 0.1rem 0.1rem 0 #fff;
+    }
+
+    h2 {
+      color: #fff;
+      font-size: 1.8rem;
+      text-shadow: 2px 2px 0 #000;
+      cursor: default;
+    }
+
+    .project-title h1 {
+      font-size: 2rem;
+    }
+    /*---------- Form styles cleared ----------*/
+    .calc-form,
+    .input-area,
+    input,
+    label {
+      -webkit-appearance: none;
+      appearance: none;
+      border-radius: 0;
+      border: none;
+    }
+
+    /*---------- This is the "FORM" element that all the inputs are inside----------*/
+    .input-container {
+      width: 80%;
+      margin-left: 10%;
+      margin-bottom: 1rem;
+      text-align: center;
+      box-shadow: 2px 2px 5px #000;
+
+      /*---------- Each input is in one of these parent containers ----------*/
+      .input-column {
+        height: 7rem;
+        padding: 1rem;
+        z-index: 2;
+        transition: all 0.3s ease-in-out;
+
+        h2 {
+          font-size: 1.5rem;
+        }
+      }
+
+      /*---------- First Crack column ----------*/
+      #fc-column {
+        background-color: rgba(140, 39, 3, 1);
+      }
+
+      /*---------- Total Roast Time column ----------*/
+      #trt-column {
+        background-color: rgba(242, 120, 75, 1);
+      }
+
+      /*---------- Developement Time Ratio column ----------*/
+      #dtr-column {
+        background-color: rgba(217, 121, 113, 1);
+      }
+    }
+
+    /*---------- Styles for the input field AND the grey placeholder text ----------*/
+    .input-field,
+    .input-label {
+      position: absolute;
+      top: 3.25rem;
+      left: 25%;
+      height: 2.5rem;
+      width: 50%;
+      line-height: 2.5rem;
+      cursor: text;
+      font-family: monospace;
+      font-size: 1rem;
+      color: #000;
+      border: none;
+      transition: all 0.4s ease-in-out, padding 0.2s ease-in-out, font-weight 0s linear;
+    }
+
+    .input-label {
+      background-color: #fff;
+      text-align: center;
+      color: #d3d3d3;
+      z-index: 1;
+    }
+
+    #dtr-label:after {
+      position: absolute;
+      right: 0;
+      padding-right: 1rem;
+      content: "%";
+      transition: color 0.2s linear;
+    }
+
+    .input-field {
+      background-color: transparent;
+      text-align: left;
+      padding-left: 3.5rem;
+      border-bottom: 3px solid black;
+      z-index: 2;
+    }
+
+    /*---------- This footer is under the project, but still inside the project container ----------*/
+    .project-footer {
+      position: absolute;
+      bottom: -2rem;
+      right: 1rem;
+      padding-right: 1rem;
+      font-family: courier;
+
+      p {
+        display: inline;
+        padding: 0 0 0.1rem;
+        cursor: default;
+        transition: all 0.2s linear;
+
+        #about {
+          left: 0;
+        }
+
+        #author {
+          right: 0;
+        }
+      }
+    }
+
+    /*---------- When you click the "?" this overlay will pop up and fill the entire project container with a transparent black ----------*/
+    #about-overlay {
+      position: absolute;
+      display: flex;
+      flex-flow: row nowrap;
+      height: auto;
+      min-height: 100% !important;
+      width: 100%;
+      top: 0;
+      justify-content: center;
+      align-items: flex-start;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 2;
+    }
+
+    /*---------- This is inside the overlay and displays information about roasting terminology ----------*/
+    #about-window {
+      position: relative;
+      display: inline-block;
+      height: auto;
+      width: 60rem;
+      max-width: 85%;
+      margin: 1rem 0 4rem;
+      padding: 2rem;
+      background-color: #fff;
+      box-shadow: 4px 4px 2px #000;
+      z-index: 3;
+    }
+
+    .about-content {
+      position: relative;
+      display: flex;
+      flex-flow: column nowrap;
+      height: auto;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1;
+    }
+
+    #graph-about {
+      height: auto;
+      width: 100%;
+    }
+
+    #graph-about img {
+      height: auto;
+      width: 100%;
+    }
+
+    .about-text {
+      height: auto;
+      width: 100%;
+    }
+
+    /*---------- "Exit" button inside the overlay ----------*/
+    #x-about {
+      position: absolute;
+      width: auto;
+      top: 5px;
+      right: 8px;
+      padding: 0;
+      font-size: 0.75rem;
+      cursor: default;
+      z-index: 1;
+      transition: all 0.4s ease-out;
+    }
+    /* ---------- Headings and Type ---------- */
+    .about-content {
+      /*---------- Main Heading and definition headings ----------*/
+      h1,
+      h2 {
+        height: auto;
+        width: 100%;
+        padding-bottom: 1rem;
+        font-size: 1.25rem;
+        color: #000;
+        text-shadow: 1px 1px 0 #000;
+      }
+
+      /*---------- "[scroll down]" text ----------*/
+      h5 {
+        margin-top: -1.25rem;
+        font-size: 0.75rem;
+      }
+
+      p {
+        margin-top: 0rem;
+        padding: 0;
+      }
+    }
+
+    p {
+      padding-bottom: 1rem;
+      font-family: courier;
+      font-size: 0.75rem;
+      line-height: 1.2rem;
+    }
+
+    span.error-title,
+    span.term-title {
+      padding-right: 0.75rem;
+      font-weight: 600;
+    }
+
+    span.error-title {
+      color: red;
+    }
+
+    span.equation {
+      padding-top: 0.1rem;
+      font-style: italic;
+    }
+
+    /*---------- Animations ----------*/
+    #fc-column.bg-hover {
+      background-color: rgba(140, 39, 3, 0.9);
+    }
+
+    #trt-column.bg-hover {
+      background-color: rgba(242, 120, 75, 0.875);
+    }
+
+    #dtr-column.bg-hover {
+      background-color: rgba(217, 121, 113, 0.9);
+    }
+
+    .input-column.input-hover .input-field {
+      box-shadow: 3px 3px 0 #000;
+    }
+
+    .input-column.perc #dtr-label::after {
+      color: #000;
+    }
+
+    .input-column.focus .input-field {
+      outline: none;
+      box-shadow: 3px 5px 0 #000;
+    }
+
+    .input-column.complete .input-field {
+      font-weight: 600;
+    }
+
+    .input-column.calculate .input-field {
+      color: red;
+    }
+
+    #about.hover,
+    #x-about.hover {
+      text-shadow: 1px 1px 0 black;
+      border-bottom: 0.25px solid black;
+    }
+  }
+}
