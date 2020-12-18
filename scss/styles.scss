@@ -158,6 +158,15 @@
 
     & > div {
       display: none; // The initial state of any code snippet is to NOT be displayed
+      position: relative;
+
+      &#html-code {
+        padding-right: 7px;
+      }
+
+      &.shift-code-tab-left {
+        left: -7px;
+      }
     }
   }
 }
@@ -190,14 +199,14 @@ body .gist .highlight {
 }
 
 body .gist .highlight td {
-  padding: 5px 15px !important;
+  padding: 5px 10px !important;
   line-height: 1;
   font-family: inherit;
   font-size: inherit;
 }
 
 body .gist tr:first-child td {
-  padding-top: 0.5rem !important;
+  padding-top: 5px !important;
 }
 
 body .gist tr:last-child td {

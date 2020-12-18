@@ -377,6 +377,13 @@ a:hover {
 }
 .code-wrapper .code-container > div {
   display: none;
+  position: relative;
+}
+.code-wrapper .code-container > div#html-code {
+  padding-right: 7px;
+}
+.code-wrapper .code-container > div.shift-code-tab-left {
+  left: -7px;
 }
 
 /*---------- Gist Styles ----------*/
@@ -408,14 +415,14 @@ body .gist .highlight {
 }
 
 body .gist .highlight td {
-  padding: 5px 15px !important;
+  padding: 5px 10px !important;
   line-height: 1;
   font-family: inherit;
   font-size: inherit;
 }
 
 body .gist tr:first-child td {
-  padding-top: 0.5rem !important;
+  padding-top: 5px !important;
 }
 
 body .gist tr:last-child td {
@@ -921,18 +928,18 @@ footer .footer-links {
   right: 1rem;
   padding-right: 1rem;
   font-family: courier;
+  cursor: default;
 }
 #roast .project-footer p {
   display: inline;
   padding: 0 0 0.1rem;
-  cursor: default;
   transition: all 0.2s linear;
 }
-#roast .project-footer p #about {
-  left: 0;
+#roast .project-footer p#click-me {
+  cursor: help;
 }
-#roast .project-footer p #author {
-  right: 0;
+#roast .project-footer p#about {
+  cursor: pointer;
 }
 #roast #about-overlay {
   position: absolute;

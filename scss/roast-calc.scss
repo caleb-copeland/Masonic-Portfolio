@@ -124,19 +124,19 @@
       right: 1rem;
       padding-right: 1rem;
       font-family: courier;
+      cursor: default;
 
       p {
         display: inline;
         padding: 0 0 0.1rem;
-        cursor: default;
         transition: all 0.2s linear;
 
-        #about {
-          left: 0;
+        &#click-me {
+          cursor: help;
         }
-
-        #author {
-          right: 0;
+        
+        &#about {
+          cursor: pointer;
         }
       }
     }
