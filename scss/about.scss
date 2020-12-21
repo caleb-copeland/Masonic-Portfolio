@@ -3,14 +3,16 @@
   /*---------- About Body Styles ----------*/
   /*---------------------------------------*/
   #about {
+
     /*---------- Card that displays the image of MEEEE! ----------*/
-    #about-intro {
+    #about-card {
       background-color: colors.$orange;
 
       /*---------- h2='Hello There' // h3=up-arrows ----------*/
       h2,
       h3 {
         font-family: fonts.$anonymous;
+        color: white;
         text-shadow: 0.125rem 0.125rem 0 #000;
         transition: all 0.5s ease;
       }
@@ -36,7 +38,7 @@
 
       &:hover {
         h2 {
-          top: 1rem;
+          top: 0rem;
         }
 
         h3 {
@@ -44,7 +46,7 @@
         }
 
         .thumbnail {
-          bottom: -8rem;
+          bottom: -7rem;
           z-index: 1;
         }
       }

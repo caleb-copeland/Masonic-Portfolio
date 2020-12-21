@@ -1,6 +1,7 @@
 @use 'base'; // Global Styles
 @use 'fonts'; // Google Fonts and Font-Variables
 @use 'colors'; // Color Variables
+@import 'home';
 @import 'about';
 @import 'memory-game'; // Memory-Game Specific CSS Mixin
 @import 'roast-calc'; // Roast-Calc Specific CSS Mixin
@@ -53,34 +54,17 @@
 .navbar-toggler {
   border: none; // ¡Get rid of that dang border!
 }
-/*------------------------------------------*/
-/*---------- Projects Body Styles ----------*/
-/*------------------------------------------*/
+/*-----------------------------------*/
+/*---------- Global Styles ----------*/
+/*-----------------------------------*/
+/*---------- "Card" that displays each individual project ----------*/
 .portfolio-card {
+  positiion: relative;
   height: auto;
   width: 100%;
   color: white;
 
-  .overlay {
-    height: auto;
-    width: auto;
-    z-index: 1;
-
-    .overlay-link {
-      display: block;
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      top: 0;
-      left: 0;
-      z-index: 1;
-    }
-  }
-
-  p {
-    padding-right: 20%;
-  }
-
+  /*---------- Image of the project ----------*/
   .thumbnail {
     height: auto;
     width: 80%;
@@ -91,42 +75,31 @@
     transition: all 0.5s ease;
   }
 
-  &:hover .thumbnail {
-    bottom: -8rem;
-  }
-  // Individual Card Styles //
-  &.memory-game {
-    @include card-style ('memory');
+  p {
+    padding-right: 20%;
   }
 
-  &.roast-calc {
-    @include card-style ('roast');
-  }
-
-  &.form {
-    @include card-style ('form');
-  }
-  // Shadow at the bottom  of the card to add a 'pocket' effect...
-  &:after {
-    display: block;
-    position: absolute;
-    height: 1rem;
-    width: 70%;
-    bottom: -1rem;
-    left: 15%;
-    content: '';
-    box-shadow: 0 0 1rem #000;
+  /*---------- Overlay covers the card so that nothing is selectable ----------*/
+  .overlay {
+    height: auto;
+    width: auto;
+    z-index: 1;
+    /*---------- Link that is the entire height and width of the overlay and links to the individual project page ----------*/
+    .overlay-link {
+      display: block;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
   }
 }
 
-#short-about {
-  a {
-    @include link-underline (colors.$dark-blue);
-  }
-}
-/*------------------------------------------------*/
-/*---------- Project Page - Memory Game ----------*/
-/*------------------------------------------------*/
+/*-----------------------------------*/
+/*---------- Project Pages ----------*/
+/*-----------------------------------*/
 .code-nav {
   background-color: #444; // BG color for the nav in a Projects page that controls which code is displayed
   /*---------- Each individual link in the code nav is a "code-tab" ----------*/
@@ -161,11 +134,11 @@
       position: relative;
 
       &#html-code {
-        padding-right: 7px;
+        padding-right: 7px; // This makes the overflow appear the same between all the code tabs (read next comment for explination)
       }
 
       &.shift-code-tab-left {
-        left: -7px;
+        left: -7px; // For whatever reason the GIST embed indents the rows differently for HTML and (CSS and JS), so this shifts the css and js left by 7px so that when you change between the codes the rows starts with the same indentation
       }
     }
   }
@@ -226,8 +199,9 @@ body .gist .gist-meta {
 /*-----------------------------------*/
 footer {
   position: relative;
-  bottom: 0;
+  height: auto;
   width: 100%;
+  bottom: 0;
   margin-top: 5rem;
   background-color: colors.$really-really-see-through-black;
 
@@ -259,6 +233,7 @@ footer {
 //------------------------------------------//
 //---------- Page Specific Styles ----------//
 //------------------------------------------//
+@include home;
 @include about;
 @include memory-game;
 @include roast-calc;

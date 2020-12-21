@@ -193,30 +193,17 @@ a:hover {
   border: none;
 }
 
-/*------------------------------------------*/
-/*---------- Projects Body Styles ----------*/
-/*------------------------------------------*/
+/*-----------------------------------*/
+/*---------- Global Styles ----------*/
+/*-----------------------------------*/
+/*---------- "Card" that displays each individual project ----------*/
 .portfolio-card {
+  positiion: relative;
   height: auto;
   width: 100%;
   color: white;
-}
-.portfolio-card .overlay {
-  height: auto;
-  width: auto;
-  z-index: 1;
-}
-.portfolio-card .overlay .overlay-link {
-  display: block;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-.portfolio-card p {
-  padding-right: 20%;
+  /*---------- Image of the project ----------*/
+  /*---------- Overlay covers the card so that nothing is selectable ----------*/
 }
 .portfolio-card .thumbnail {
   height: auto;
@@ -227,81 +214,28 @@ a:hover {
   box-shadow: 0.5rem 0.5rem 0 #000, 1rem 1rem 2rem #000;
   transition: all 0.5s ease;
 }
-.portfolio-card:hover .thumbnail {
-  bottom: -8rem;
+.portfolio-card p {
+  padding-right: 20%;
 }
-.portfolio-card.memory-game {
-  background-color: #656b8c;
+.portfolio-card .overlay {
+  height: auto;
+  width: auto;
+  z-index: 1;
+  /*---------- Link that is the entire height and width of the overlay and links to the individual project page ----------*/
 }
-.portfolio-card.memory-game h2 {
-  text-shadow: 0.125rem 0.125rem 0 #f23005;
-  transition: all 0.5s ease;
-}
-.portfolio-card.memory-game h2.js-hover {
-  text-shadow: 0.2rem 0.2rem 0 #f23005;
-}
-.portfolio-card.roast-calc {
-  background-color: #2a828c;
-}
-.portfolio-card.roast-calc h2 {
-  text-shadow: 0.125rem 0.125rem 0 #f2784b;
-  transition: all 0.5s ease;
-}
-.portfolio-card.roast-calc h2.js-hover {
-  text-shadow: 0.2rem 0.2rem 0 #f2784b;
-}
-.portfolio-card.form {
-  background-color: #717171;
-}
-.portfolio-card.form h2 {
-  text-shadow: 0.125rem 0.125rem 0 #edca3b;
-  transition: all 0.5s ease;
-}
-.portfolio-card.form h2.js-hover {
-  text-shadow: 0.2rem 0.2rem 0 #edca3b;
-}
-.portfolio-card:after {
+.portfolio-card .overlay .overlay-link {
   display: block;
   position: absolute;
-  height: 1rem;
-  width: 70%;
-  bottom: -1rem;
-  left: 15%;
-  content: "";
-  box-shadow: 0 0 1rem #000;
-}
-
-#short-about a:after, #short-about a:before {
-  position: absolute;
-  height: 3px;
-  width: 0;
-  margin-top: 5px;
-  transition: width 0.5s ease;
-  content: "";
-}
-#short-about a:before {
-  bottom: -7px;
-  left: 2.5px;
-  background-color: #000;
-}
-#short-about a:after {
-  bottom: -5px;
-  left: 0;
-  background-color: #6872a6;
-}
-#short-about a:hover:after, #short-about a:hover:before {
+  height: 100%;
   width: 100%;
-}
-#short-about a:hover:before {
-  transition: width 0.6s ease;
-}
-#short-about a:hover:after {
-  transition: width 0.4s ease;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
-/*------------------------------------------------*/
-/*---------- Project Page - Memory Game ----------*/
-/*------------------------------------------------*/
+/*-----------------------------------*/
+/*---------- Project Pages ----------*/
+/*-----------------------------------*/
 .code-nav {
   background-color: #444;
   /*---------- Each individual link in the code nav is a "code-tab" ----------*/
@@ -442,8 +376,9 @@ body .gist .gist-meta {
 /*-----------------------------------*/
 footer {
   position: relative;
-  bottom: 0;
+  height: auto;
   width: 100%;
+  bottom: 0;
   margin-top: 5rem;
   background-color: rgba(0, 0, 0, 0.02);
 }
@@ -549,6 +484,91 @@ footer .footer-links {
   transition: width 0.4s ease;
 }
 
+/*--------------------------------------------*/
+/*---------- Index-Home Page Styles ----------*/
+/*--------------------------------------------*/
+#home {
+  /*---------- Each Card (including the very first brief description) ----------*/
+  /*---------- Individual Card Styles ----------*/
+  /*---------- This is the first (Top-Left) item that describes me briefly ----------*/
+}
+#home .free-masonry {
+  opacity: 0;
+}
+#home .portfolio-card {
+  /*---------- Shadow at the bottom  of the card to add a 'pocket' effect ----------*/
+}
+#home .portfolio-card.memory-game {
+  background-color: #656b8c;
+}
+#home .portfolio-card.memory-game h2 {
+  text-shadow: 0.125rem 0.125rem 0 #f23005;
+  transition: all 0.5s ease;
+}
+#home .portfolio-card.memory-game h2.js-hover {
+  text-shadow: 0.2rem 0.2rem 0 #f23005;
+}
+#home .portfolio-card.roast-calc {
+  background-color: #2a828c;
+}
+#home .portfolio-card.roast-calc h2 {
+  text-shadow: 0.125rem 0.125rem 0 #f2784b;
+  transition: all 0.5s ease;
+}
+#home .portfolio-card.roast-calc h2.js-hover {
+  text-shadow: 0.2rem 0.2rem 0 #f2784b;
+}
+#home .portfolio-card.form {
+  background-color: #717171;
+}
+#home .portfolio-card.form h2 {
+  text-shadow: 0.125rem 0.125rem 0 #edca3b;
+  transition: all 0.5s ease;
+}
+#home .portfolio-card.form h2.js-hover {
+  text-shadow: 0.2rem 0.2rem 0 #edca3b;
+}
+#home .portfolio-card:hover .thumbnail {
+  bottom: -8rem;
+}
+#home .portfolio-card:after {
+  display: block;
+  position: absolute;
+  height: 1rem;
+  width: 70%;
+  bottom: -1rem;
+  left: 15%;
+  content: "";
+  box-shadow: 0 0 1rem #000;
+}
+#home #short-about a:after, #home #short-about a:before {
+  position: absolute;
+  height: 3px;
+  width: 0;
+  margin-top: 5px;
+  transition: width 0.5s ease;
+  content: "";
+}
+#home #short-about a:before {
+  bottom: -7px;
+  left: 2.5px;
+  background-color: #000;
+}
+#home #short-about a:after {
+  bottom: -5px;
+  left: 0;
+  background-color: #6872a6;
+}
+#home #short-about a:hover:after, #home #short-about a:hover:before {
+  width: 100%;
+}
+#home #short-about a:hover:before {
+  transition: width 0.6s ease;
+}
+#home #short-about a:hover:after {
+  transition: width 0.4s ease;
+}
+
 /*---------------------------------------*/
 /*---------- About Body Styles ----------*/
 /*---------------------------------------*/
@@ -558,44 +578,45 @@ footer .footer-links {
   /*---------- Paragraph #2 in the about me section ----------*/
   /*---------- Table for my "mini" resume ----------*/
 }
-#about #about-intro {
+#about #about-card {
   background-color: #d9725b;
   /*---------- h2='Hello There' // h3=up-arrows ----------*/
   /*---------- Photo of meh ----------*/
   /*---------- Overlay covers the card so you can not select anything in it ----------*/
 }
-#about #about-intro h2,
-#about #about-intro h3 {
+#about #about-card h2,
+#about #about-card h3 {
   font-family: "Anonymous Pro", courier, monospace, serif;
+  color: white;
   text-shadow: 0.125rem 0.125rem 0 #000;
   transition: all 0.5s ease;
 }
-#about #about-intro h2 {
+#about #about-card h2 {
   top: 1.5rem;
   left: 10%;
   font-size: 1.5rem;
   font-weight: 700;
 }
-#about #about-intro h3 {
+#about #about-card h3 {
   top: -0.5rem;
   right: 15%;
   font-size: 4rem;
 }
-#about #about-intro .thumbnail {
+#about #about-card .thumbnail {
   bottom: -6rem;
   transition: all 0.5s ease;
 }
-#about #about-intro:hover h2 {
-  top: 1rem;
+#about #about-card:hover h2 {
+  top: 0rem;
 }
-#about #about-intro:hover h3 {
+#about #about-card:hover h3 {
   top: 5rem;
 }
-#about #about-intro:hover .thumbnail {
-  bottom: -8rem;
+#about #about-card:hover .thumbnail {
+  bottom: -7rem;
   z-index: 1;
 }
-#about #about-intro::after {
+#about #about-card::after {
   display: block;
   position: absolute;
   height: 100%;

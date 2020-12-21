@@ -1,0 +1,48 @@
+@mixin home {
+
+  /*--------------------------------------------*/
+  /*---------- Index-Home Page Styles ----------*/
+  /*--------------------------------------------*/
+  #home {
+    /*---------- Each Card (including the very first brief description) ----------*/
+    .free-masonry {
+      // position: relative;
+      opacity: 0;
+    }
+    /*---------- Individual Card Styles ----------*/
+    .portfolio-card {
+      &.memory-game {
+        @include card-style ('memory'); // Mixin
+      }
+
+      &.roast-calc {
+        @include card-style ('roast'); // Mixin
+      }
+
+      &.form {
+        @include card-style ('form'); // Mixin
+      }
+
+      &:hover .thumbnail {
+        bottom: -8rem;
+      }
+      /*---------- Shadow at the bottom  of the card to add a 'pocket' effect ----------*/
+      &:after {
+        display: block;
+        position: absolute;
+        height: 1rem;
+        width: 70%;
+        bottom: -1rem;
+        left: 15%;
+        content: '';
+        box-shadow: 0 0 1rem #000;
+      }
+    }
+    /*---------- This is the first (Top-Left) item that describes me briefly ----------*/
+    #short-about {
+      a {
+        @include link-underline (colors.$dark-blue);
+      }
+    }
+  }
+}
