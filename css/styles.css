@@ -59,11 +59,11 @@ a:hover {
 }
 
 /*---------- Fade-Out ----------*/
-.fade-out {
+body.fade-out {
   opacity: 0;
 }
 
-.load {
+body.load {
   transition: none;
 }
 
@@ -606,6 +606,7 @@ footer .footer-links {
 }
 #about #about-card .thumbnail {
   bottom: -6rem;
+  background-color: #d9725b;
   transition: all 0.5s ease;
 }
 #about #about-card:hover h2 {
@@ -758,15 +759,18 @@ footer .footer-links {
   padding: 0;
 }
 #memory .card-display {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
   position: relative;
   top: 0;
   left: 0;
-  margin: auto;
   background-repeat: no-repeat;
   background-sizing: cover;
   background-color: #fff;
   text-align: center;
-  font-family: courier;
+  font-family: monospace;
   cursor: default;
   transition: box-shadow 0.2s ease-in, top 0.2s linear, left 0.2s linear;
 }
@@ -1491,7 +1495,7 @@ html {
 }
 
 @media only screen and (max-width: 1199px) {
-  #roast #roast .input-field {
+  #roast .input-field {
     padding-left: 2.6rem;
   }
 }
@@ -1552,7 +1556,7 @@ html {
     font-size: 1.25rem;
   }
   #roast .input-field {
-    padding-left: 5.5rem;
+    padding-left: 5.3rem;
   }
 }
 @media only screen and (max-width: 425px) {
@@ -1571,7 +1575,7 @@ html {
     top: 5rem;
   }
   #roast .input-field {
-    padding-left: 5.2rem;
+    padding-left: 3.4rem;
   }
 }
 @media only screen and (max-width: 357px) {

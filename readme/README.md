@@ -18,12 +18,12 @@ My goal for this project was to display my recent work in a unique and fun way. 
 ![Example screenshot](./img/screenshot.png)
 
 ## Technologies
-* Tech 1 - version 1.0
-* Tech 2 - version 2.0
-* Tech 3 - version 3.0
+* Bootstrap - version 4.5
+* Jquery - version 3.5.1
+* Cleave.js - version 1.6.0 (Roast Calculator Project)
 
 ## Setup
-Describe how to install / setup your local environement / add link to demo version.
+Simple static site. Simply download and open index.html.
 
 ## Code Examples
 Show examples of usage:

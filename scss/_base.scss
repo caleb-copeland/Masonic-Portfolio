@@ -57,10 +57,10 @@ a {
   background-color: #ccc;
 }
 /*---------- Fade-Out ----------*/
-.fade-out {
+body.fade-out {
   opacity: 0;
 }
 
-.load {
+body.load {
   transition: none;
 }
